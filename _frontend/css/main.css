@@ -1,0 +1,134 @@
+
+
+/* ==========================================================================
+	Programadora Brasil
+   ========================================================================== */
+
+/* Navbar styles */
+
+.navbar-brand{
+	padding: 4px 15px;
+}
+.navbar-brand img{
+	max-height: 42px;
+}
+.navbar.main{
+	padding: 2em;
+	background: #ED1558;
+	position: fixed;
+	min-height: 100%;
+	z-index: 10;
+	border-radius: 0;
+}
+.back {
+	background: #ED1558;
+	position: absolute;
+	height: 100%;
+	width: 20%;
+	left: 0;
+	z-index: 0;
+}
+.container.main {
+	padding-top: 50px;
+	margin-bottom: 30px;
+}
+/* Footer styles */
+body {
+	background: url(../img/back.png) center center repeat-y;
+	color: #666;
+}
+h1 {
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #ED1558;
+}
+h2 {
+	font-size: 1.5em;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #ED1558;
+	margin-bottom: 1em;
+}
+label {
+	text-transform: uppercase;
+	text-align: right
+}
+.navbar-menu ul {
+	margin: 5em 0;
+}
+ul .btn {
+	background: #ED1558;
+	border: 0;
+	border-bottom: 1px dotted white;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 300;
+	text-align: left;
+	padding-left: 5.3em;
+	border-radius: 0 !important
+}
+ul .btn a {
+	color: white;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%
+
+}
+ul .btn:hover a {
+	color: inherit;
+	text-decoration: none;
+
+}
+#passos {
+}
+#passos li {
+	display: block;
+	float: left;
+	font-size: 0.7em;
+	width:6em;
+	height:6em;
+	margin-right: 0.5em;
+	background: #f1f1f1;
+	text-align: center;
+	border-radius: 50%;
+	font-weight: 300;
+	text-transform: uppercase;
+	padding-top: 0.3em;
+}
+.passo_atual {
+	color: white; 
+	background: #ED1558 !important;
+}
+#passos li span {
+	font-size: 2em;
+	margin-top: 1.5em
+
+}
+hr {
+	border-top-color: #b1b1b1
+}
+hr.dotted {
+	border-top-style: dotted;
+}
+table {
+	font-size: 0.8em;
+}
+td {
+	vertical-align: middle !important;
+}
+footer{
+	padding-top: 1em;
+	text-transform: uppercase;
+	color: #FFBE00 !important;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-top: 5px solid #FFBE00;
+	background-color: #333;
+	color: #FFF;
+}
+
+
+
+
+

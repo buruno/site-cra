@@ -405,138 +405,146 @@ angular.module("questionario/questionario.tpl.html", []).run(["$templateCache", 
     "    </form>\n" +
     "    <br />\n" +
     "    <hr />\n" +
-    "    <h2>Detalhamento do tipo de materiaL</h2>\n" +
-    "    <div class=\"table-responsive\">\n" +
-    "      <form role=\"form\" class=\"form-horizontal\">\n" +
-    "      <table class=\"table table-condensed table-striped table-bordered\">\n" +
-    "        <thead>\n" +
-    "          <th>Material</th>\n" +
-    "          <th>Tipo</th>\n" +
-    "          <th></th>\n" +
-    "          <th>Qte. Aproximada (pés, horas, unidades)</th>\n" +
-    "          <th>Observações (pqualidade, organização, etc)</th>\n" +
-    "        </thead>\n" +
-    "        <tbody>\n" +
-    "          <tr>\n" +
-    "            <td rowspan=\"5\" style=\"vertical-align: middle\">Bitola</td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>8mm</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>16mm</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>35mm</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>9,5mm</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td rowspan=\"3\" style=\"vertical-align: middle\">Negativo</td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>Cor</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>pb</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td rowspan=\"3\" style=\"vertical-align: middle\">Positivo</td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>Cor</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>pb</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td rowspan=\"3\" style=\"vertical-align: middle\">Internegativo</td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>Cor</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>pb</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td rowspan=\"3\" style=\"vertical-align: middle\">Interpositivo</td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>Cor</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>pb</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td rowspan=\"3\" style=\"vertical-align: middle\">Cópias</td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>Cor</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>pb</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td rowspan=\"3\" style=\"vertical-align: middle\">Outras</td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>Cor</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "          <tr>\n" +
-    "            <td>pb</td>\n" +
-    "            <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
-    "            <td><input class=\"form-control\" type=\"text\" /></td>\n" +
-    "            <td><textarea class=\"form-control\"></textarea></td>\n" +
-    "          </tr>\n" +
-    "        </tbody>\n" +
-    "      </table>\n" +
-    "    </form>\n" +
-    "    </div>\n" +
+    "    <h2>Detalhamento do tipo de Material</h2>\n" +
+    "     <div class=\"form-group\">\n" +
+    "        <label class=\"col-sm-8\">Material em <strong>película</strong>? <input type=\"checkbox\" /></label>\n" +
+    "     </div>\n" +
+    "      <div class=\"table-responsive hide\" id=\"pelicula\" >\n" +
+    "        <form role=\"form\" class=\"form-horizontal\">\n" +
+    "        <table class=\"table table-condensed table-striped table-bordered\">\n" +
+    "          <thead>\n" +
+    "            <th>Material</th>\n" +
+    "            <th>Tipo</th>\n" +
+    "            <th></th>\n" +
+    "            <th>Qte. Aproximada (pés, horas ou unidades)</th>\n" +
+    "            <th>Observações (qualidade, organização, conteúdo, etc)</th>\n" +
+    "          </thead>\n" +
+    "          <tbody>\n" +
+    "            <tr>\n" +
+    "              <td rowspan=\"7\" style=\"vertical-align: middle\">Bitola</td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>16mm</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>35mm</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>8mm</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>S8mm</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>9,5mm</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>Outros (especifique no campo \"observação\")</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td rowspan=\"3\" style=\"vertical-align: middle\">Negativo original</td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>Cor</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>pb</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td rowspan=\"3\" style=\"vertical-align: middle\">Contratipo<br />(internegativo)</td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>Cor</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>pb</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td rowspan=\"3\" style=\"vertical-align: middle\">Máster<br />(interpositivo)</td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>Cor</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>pb</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td rowspan=\"3\" style=\"vertical-align: middle\">Cópia</td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>Cor</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>pb</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td rowspan=\"3\" style=\"vertical-align: middle\">Outros<br />(ex: sobras, copião...)</td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>Cor</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "            <tr>\n" +
+    "              <td>pb</td>\n" +
+    "              <td><input class=\"form-control\" type=\"checkbox\" /></td>\n" +
+    "              <td><input class=\"form-control\" type=\"text\" /></td>\n" +
+    "              <td><textarea class=\"form-control\"></textarea></td>\n" +
+    "            </tr>\n" +
+    "          </tbody>\n" +
+    "        </table>\n" +
+    "      </form>\n" +
+    "      </div>\n" +
+    "      <div class=\"form-group\">\n" +
+    "        <label class=\"col-sm-8\">Material em <strong>vídeo</strong>? <input type=\"checkbox\" /></label>\n" +
+    "      </div>\n" +
+    "      <div class=\"form-group\">\n" +
+    "        <label class=\"col-sm-8\">Materiais correlatos (cartazes, fotos, etc)? <input type=\"checkbox\" /></label>\n" +
+    "      </div>\n" +
+    "\n" +
+    "\n" +
     "");
 }]);

@@ -85,136 +85,144 @@
     </form>
     <br />
     <hr />
-    <h2>Detalhamento do tipo de materiaL</h2>
-    <div class="table-responsive">
-      <form role="form" class="form-horizontal">
-      <table class="table table-condensed table-striped table-bordered">
-        <thead>
-          <th>Material</th>
-          <th>Tipo</th>
-          <th></th>
-          <th>Qte. Aproximada (pés, horas, unidades)</th>
-          <th>Observações (pqualidade, organização, etc)</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="5" style="vertical-align: middle">Bitola</td>
-          </tr>
-          <tr>
-            <td>8mm</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>16mm</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>35mm</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>9,5mm</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td rowspan="3" style="vertical-align: middle">Negativo</td>
-          </tr>
-          <tr>
-            <td>Cor</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>pb</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td rowspan="3" style="vertical-align: middle">Positivo</td>
-          </tr>
-          <tr>
-            <td>Cor</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>pb</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td rowspan="3" style="vertical-align: middle">Internegativo</td>
-          </tr>
-          <tr>
-            <td>Cor</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>pb</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td rowspan="3" style="vertical-align: middle">Interpositivo</td>
-          </tr>
-          <tr>
-            <td>Cor</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>pb</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td rowspan="3" style="vertical-align: middle">Cópias</td>
-          </tr>
-          <tr>
-            <td>Cor</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>pb</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td rowspan="3" style="vertical-align: middle">Outras</td>
-          </tr>
-          <tr>
-            <td>Cor</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-          <tr>
-            <td>pb</td>
-            <td><input class="form-control" type="checkbox" /></td>
-            <td><input class="form-control" type="text" /></td>
-            <td><textarea class="form-control"></textarea></td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
-    </div>
+    <h2>Detalhamento do tipo de Material</h2>
+     <div class="form-group">
+        <label class="col-sm-8">Material em <strong>película</strong>? <input type="checkbox" /></label>
+     </div>
+      <div class="table-responsive hide" id="pelicula" >
+        <form role="form" class="form-horizontal">
+        <table class="table table-condensed table-striped table-bordered">
+          <thead>
+            <th>Material</th>
+            <th>Tipo</th>
+            <th></th>
+            <th>Qte. Aproximada (pés, horas ou unidades)</th>
+            <th>Observações (qualidade, organização, conteúdo, etc)</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="7" style="vertical-align: middle">Bitola</td>
+            </tr>
+            <tr>
+              <td>16mm</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>35mm</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>8mm</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>S8mm</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>9,5mm</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>Outros (especifique no campo "observação")</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td rowspan="3" style="vertical-align: middle">Negativo original</td>
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>pb</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td rowspan="3" style="vertical-align: middle">Contratipo<br />(internegativo)</td>
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>pb</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td rowspan="3" style="vertical-align: middle">Máster<br />(interpositivo)</td>
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>pb</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td rowspan="3" style="vertical-align: middle">Cópia</td>
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>pb</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td rowspan="3" style="vertical-align: middle">Outros<br />(ex: sobras, copião...)</td>
+            </tr>
+            <tr>
+              <td>Cor</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+            <tr>
+              <td>pb</td>
+              <td><input class="form-control" type="checkbox" /></td>
+              <td><input class="form-control" type="text" /></td>
+              <td><textarea class="form-control"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-8">Material em <strong>vídeo</strong>? <input type="checkbox" /></label>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-8">Materiais correlatos<br />(cartazes, fotos, etc)? <input type="checkbox" /></label>
+      </div>
+
+

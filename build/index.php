@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Programadora Brasil</title>
-	<base href="http://localhost/cra/build/">
+	<title>CRA &ndash; Centro de Referência Audiovisual</title>
+	<base href="http://localhost/site-cra/build/">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -34,7 +34,6 @@
 	<script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
 	<script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
-	<script type="text/javascript" src="vendor/angular-ui-utils/modules/route/route.js"></script>
 	<script type="text/javascript" src="src/app/about/about.js"></script>
 	<script type="text/javascript" src="src/app/app.js"></script>
 	<script type="text/javascript" src="src/app/cadastro/cadastro.js"></script>
@@ -62,7 +61,7 @@
 				<li><a class="btn btn-default btn-block" href="questionario">Questionário</a></li>
 			</ul>
 		</div><!--/.navbar-collapse -->
-		<img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 6em" />  
+		<img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 7em" />  
 	</div>
 </div>
 <section ui-view="main" id="main" class="container main col-sm-8 col-sm-offset-4">

@@ -17,29 +17,34 @@ angular.module( 'site-cra.questionario', [
   });
 })
 
-.controller( 'QuestionarioCtrl', function ( $scope, $rootScope, $location, $state, $scope  ) {
+.controller( 'QuestionarioCtrl', function ( $scope, $rootScope, $location, $state  ) {
   $scope.passo = 1;
   location.hash = 1;
-  $scope.dados = {};
-  $scope.material = {};
-  $scope.acervo = {};
-  $scope.banco = {};
-  $scope.deposito ={};
+ $scope.acervo = {};
   $scope.formTotal = 0;
   $scope.mudapasso = function(n){
+    if($scope.passo == 1) {
+      console.log($scope.dados);
+      if ($scope.dados.$invalid) {
+        alert('dados não preenchidos');
+        return;
+      }
+    }
     $scope.passo = $scope.passo + n;
     location.hash = $scope.passo;
-    $rootScope.estado = $scope.dados.acervo.estado;
-    $rootScope.cidade = $scope.dados.acervo.cidade;
-
     $state.go('questionario');
   };
-  $scope.formTotal = Object.keys($scope.dados).length+Object.keys($scope.material).length+Object.keys($scope.acervo).length+Object.keys($scope.banco).length+Object.keys($scope.deposito).length;
-  //Object.keys($scope.dados).length+Object.keys($scope.material).length+Object.keys($scope.acervo).length+Object.keys($scope.banco).length+Object.keys($scope.deposito).length
+
+  $scope.enviar = function() {
+    $scope.submit = function() {   
+        console.log(this.acervo);
+    };
+  };
+  $scope.formTotal = Object.keys($scope.acervo).length;
   $scope.$watch(function(){
-    $scope.formTotal = Object.keys($scope.dados).length+Object.keys($scope.material).length+Object.keys($scope.acervo).length+Object.keys($scope.banco).length+Object.keys($scope.deposito).length;
+    $scope.formTotal = Object.keys($scope.acervo).length;
   });
-  $rootScope.$on('$locationChangeStart', function(event, toState, toParams, fromState, fromParams){
+  $scope.$on('$locationChangeStart', function(event, toState, toParams, fromState, fromParams){
    if($state.current.name == "questionario") { 
     if($scope.formTotal > 0) {
       window.onbeforeunload = function (event) {
@@ -63,18 +68,13 @@ angular.module( 'site-cra.questionario', [
     }  
   });
 })
-.directive('comboEstado',function($rootScope){
-  var estado = $rootScope.estado;
-   var cidade = $rootScope.cidade;
+.directive('comboEstado',function(){
   return {
     restrict: 'A',
-    link: function(element,scope,estado,cidade) {
-      console.log($rootScope);
+    link: function() {
         new DgCidadesEstados({
-          estado: document.getElementById('dados_acervo-estado'),
-          cidade: document.getElementById('dados_acervo-cidade'),
-          estadoVal: estado,
-          cidadeVal: cidade
+          estado: document.getElementById('dados_estado'),
+          cidade: document.getElementById('dados_cidade')
         });
     }
   };

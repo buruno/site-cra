@@ -57,11 +57,26 @@ var DgCidadesEstados = function(data) {
   for (var i=0; i<length; i++) {
     nome = keys[i]; //estado e cidade
   
-    if (this[nome].getAttribute('ng-value')) {
-      data[nome+'Val'] = this[nome].getAttribute('ng-value');
+    if (this[nome].getAttribute('value')) {
+      data[nome+'Val'] = this[nome].getAttribute('value');
     }
   
-   
+    if (data[nome+'Val']) { //preenche estadoVal e cidadeVal se fornecidos na criação do DgCidadesEstados.
+    var options = this[nome].options;
+    if (nome=='estado') this.estado.onchange(); //se tiver preenchido o estado, dá run() pra preencher as cidades
+    for (var j = 0; j<options.length; j++) { //olha cada linha e vê se é a que quer... aí coloca como selected.
+      if (options[j].tagName == 'OPTION') {
+        if (options[j].value == data[nome+'Val']) {
+          options[j].setAttribute('selected',true);
+          if (nome=='estado'){ //esses dois passos são necessários pro IE6!
+            this.estado.selectedIndex=j;
+            this.estado.onchange();
+          }
+        }
+      }
+    }
+  }
+  
   }
   
 }
@@ -88,6 +103,7 @@ DgCidadesEstados.prototype = {
     var opts = this.cidade;
     while (opts.childNodes.length) opts.removeChild(opts.firstChild); // limpa a lista atual
   
+    this.addOption(opts, '', 'Selecione uma cidade');
     for (var i=0;i<itens_total;i++) this.addOption(opts, itens[i], itens[i]); // vai adicionando as cidades correspondentes
   },
   addOption: function (elm, val, text) {
@@ -97,13 +113,14 @@ DgCidadesEstados.prototype = {
     elm.appendChild(opt);
   },
   estados : [
-    ['AC','Acre'],['AL','Alagoas'],['AM','Amazonas'],['AP','Amapá'],['BA','Bahia'],
+    ['','UF'],['AC','Acre'],['AL','Alagoas'],['AM','Amazonas'],['AP','Amapá'],['BA','Bahia'],
     ['CE','Ceará'],['DF','Distrito Federal'],['ES','Espírito Santo'],['GO','Goiás'],['MA','Maranhão'],['MG','Minas Gerais'],
     ['MS','Mato Grosso do Sul'],['MT','Mato Grosso'],['PA','Pará'],['PB','Paraíba'],['PE','Pernambuco'],['PI','Piauí'],
     ['PR','Paraná'],['RJ','Rio de Janeiro'],['RN','Rio Grande do Norte'],['RO','Rondônia'],['RR','Roraima'],['RS','Rio Grande do Sul'],
     ['SC','Santa Catarina'],['SP','São Paulo'],['SE','Sergipe'],['TO','Tocantins']
   ],
   cidades : [
+  [''],
   ['Rio Branco','Acrelândia','Assis Brasil','Brasiléia','Bujari','Capixaba','Cruzeiro do Sul','Epitaciolândia','Feijó','Jordão','Mâncio Lima','Manoel Urbano','Marechal Thaumaturgo','Plácido de Castro','Porto Acre','Porto Walter','Rodrigues Alves',  'Santa Rosa do Purus','Sena Madureira','Senador Guiomard','Tarauacá','Xapuri'],
   ['Maceió','Água Branca','Anadia','Arapiraca','Atalaia','Barra de Santo Antônio','Barra de São Miguel','Batalha','Belém','Belo Monte','Boca da Mata','Branquinha','Cacimbinhas','Cajueiro','Campestre','Campo Alegre','Campo Grande','Canapi','Capela','Carneiros','Chã Preta','Coité do Nóia','Colônia Leopoldina','Coqueiro Seco','Coruripe','Craíbas',  'Delmiro Gouveia','Dois Riachos','Estrela de Alagoas','Feira Grande','Feliz Deserto','Flexeiras','Girau do Ponciano','Ibateguara','Igaci','Igreja Nova','Inhapi','Jacaré dos Homens','Jacuípe','Japaratinga','Jaramataia','Jequiá da Praia','Joaquim Gomes','Jundiá','Junqueiro','Lagoa da Canoa','Limoeiro de Anadia','Major Isidoro','Mar Vermelho','Maragogi','Maravilha','Marechal Deodoro','Maribondo','Mata Grande','Matriz de Camaragibe','Messias','Minador do Negrão','Monteirópolis','Murici','Novo Lino','Olho d\'Água das Flores','Olho d\'Água do Casado','Olho d\'Água Grande','Olivença','Ouro Branco','Palestina','Palmeira dos Índios','Pão de Açúcar','Pariconha','Paripueira','Passo de Camaragibe','Paulo Jacinto', 'Penedo','Piaçabuçu','Pilar','Pindoba','Piranhas','Poço das Trincheiras','Porto Calvo','Porto de Pedras','Porto Real do Colégio','Quebrangulo','Rio Largo','Roteiro','Santa Luzia do Norte','Santana do Ipanema','Santana do Mundaú','São Brás','São José da Laje','São José da Tapera','São Luís do Quitunde','São Miguel dos Campos','São Miguel dos Milagres','São Sebastião','Satuba','Senador Rui Palmeira','Tanque d\'Arca','Taquarana','Teotônio Vilela','Traipu','União dos Palmares','Viçosa'],
   ['Manaus','Alvarães','Amaturá','Anamã','Anori','Apuí','Atalaia do Norte','Autazes','Barcelos','Barreirinha','Benjamin Constant','Beruri','Boa Vista do Ramos','Boca do Acre','Borba','Caapiranga','Canutama','Carauari','Careiro','Careiro da Várzea','Coari','Codajás','Eirunepé','Envira','Fonte Boa','Guajará','Humaitá','Ipixuna','Iranduba','Itacoatiara','Itamarati','Itapiranga','Japurá','Juruá','Jutaí','Lábrea','Manacapuru','Manaquiri','Manicoré','Maraã','Maués','Nhamundá','Nova Olinda do Norte','Novo Airão','Novo Aripuanã','Parintins','Pauini','Presidente Figueiredo','Rio Preto da Eva','Santa Isabel do Rio Negro','Santo Antônio do Içá','São Gabriel da Cachoeira','São Paulo de Olivença','São Sebastião do Uatumã','Silves','Tabatinga','Tapauá','Tefé','Tonantins','Uarini','Urucará','Urucurituba'],

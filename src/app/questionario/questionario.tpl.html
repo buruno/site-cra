@@ -1,477 +1,831 @@
 <h1>Questionário</h1>
-    <hr />
-    <p>
-      Aqui é onde você pode cadastrar seu acervo a ser acrescentado em nosso banco de dados.
-    </p>
-    <ol id="passos" class="list-unstyled clearfix ng-scope">
-      <li ng-class="{passo_atual: passo==1}"><span>1&ordm;</span><br />passo</li>
-      <li ng-class="{passo_atual: passo==2}"><span>2&ordm;</span><br />passo</li>
-      <li ng-class="{passo_atual: passo==3}"><span>3&ordm;</span><br />passo</li>
-      <li ng-class="{passo_atual: passo==4}"><span>4&ordm;</span><br />passo</li>
-    </ol>
-    <hr class="dotted" />
-    <div class="ng-scope" ng-if="passo == 1">
-      <form role="form" id="form_dados" class="form-horizontal">
-        <h2>Dados do acervo</h2>
-        <div class="form-group">
-        <label class="col-sm-4" for="dados_acervo-id">Identificação do acervo</label>
-        <span class="col-sm-8">
-          <input class="form-control" ng-model="dados.acervo.id" ng-value="dados.acervo.id" name="dados_acervo-id" id="dados_acervo-id" placeholder="" type="text">
-        </span>
-        </div>
-        <div class="form-group">
-        <label class="col-sm-4" for="dados_acervo-nome">Nome do arquivo</label>
-        <span class="col-sm-8">
-          <input class="form-control" ng-model="dados.acervo.nome" id="dados_acervo-nome" name="dados_acervo-nome"  type="text">
-        </span>
-        </div>
-        <div class="form-group">
-        <label class="col-sm-4" for="dados_acervo-endereco">Endereço</label>
-        <span class="col-sm-8">
-          <input class="form-control" ng-model="dados.acervo.endereco" id="dados_acervo-endereco" name="dados_acervo-endereco" placeholder="" type="text">
-        </span>
-        </div>
-        <div class="form-group">
-          <!-- script combo estados -->
-          <label class="col-sm-2" for="dados_acervo-estado">Estado</label>
-          <span class="col-sm-1">
-          <select id="dados_acervo-estado" ng-model="dados.acervo.estado" name="dados_acervo-estado" combo-estado>
-          </select>
-          </span>
-          <label class="col-sm-2" for="dados_acervo-cidade">cidade</label>
-          <span class="col-sm-4">
-          <select class="col-sm-12" ng-model="dados.acervo.cidade" id="dados_acervo-cidade" name="dados_acervo-cidade">
-          </select>
-          </span>
-          <label class="col-sm-1" for="dados_acervo-cep">CEP</label>
-          <span class="col-sm-2">
-          <input class="form-control" ng-model="dados.acervo.cep" id="dados_acervo-cep" name="dados_acervo-cep" type="text">
-          </span>
-        </div>
-        <!-- fim script combo estados -->
-      <hr class="dotted">
-        <h2>Dados do responsável</h2>
-        <div class="form-group">
-        <label class="col-sm-4" for="dados_resp-nome">Responsável</label>
-        <span class="col-sm-8">
-          <input class="form-control" ng-model="dados.resp.nome" name="dados_resp-nome" id="dados_resp-nome" placeholder="" type="text">
-        </span>
-        </div>
-        <div class="form-group">
-        <label class="col-sm-4" for="dados_resp-telefone-ddd">Telefone</label>
-        <span class="col-sm-2">
-          <input class="form-control" ng-model="dados.resp.telefone.ddd" name="dados_resp-telefone-ddd" id="dados_resp-telefone" placeholder="" type="text">
-        </span>
-        <span class="col-sm-6">
-          <input class="form-control" ng-model="dados.resp.telefone.n" name="dados_resp-telefone-n" id="dados_resp-telefone-n" placeholder="" type="text">
-        </span>
+<hr />
+<p>
+	Aqui é onde você pode cadastrar seu acervo a ser acrescentado em nosso banco de dados.
+</p>
+<ol id="passos" class="list-unstyled clearfix ng-scope">
+	<li ng-class="{passo_atual: passo==1}"><span>1&ordm;</span><br />passo</li>
+	<li ng-class="{passo_atual: passo==2}"><span>2&ordm;</span><br />passo</li>
+	<li ng-class="{passo_atual: passo==3}"><span>3&ordm;</span><br />passo</li>
+	<li ng-class="{passo_atual: passo==4}"><span>4&ordm;</span><br />passo</li>
+</ol>
+<hr class="dotted" />
+<div class="ng-scope" ng-show="passo == 1">
+	<form role="form" id="form_dados" name="formDados" class="form-horizontal" novalidate>
+		<h2>Dados do acervo</h2>
+		<div class="form-group">
+		<label class="col-sm-4" for="dados_id">Identificação do acervo</label>
+		<span class="col-sm-8">
+			<input class="form-control" ng-model="dados.acervo.id" ng-value="dados.catalogacao.id" name="dados_id" id="dados_id" placeholder="" type="text"  required>
+		</span>
+		</div>
+		<div class="form-group">
+		<label class="col-sm-4" for="dados_nome">Nome do arquivo</label>
+		<span class="col-sm-8">
+			<input class="form-control" ng-model="dados.acervo.nome" id="dados_nome" name="dados_nome"  type="text"  required>
+		</span>
+		</div>
+		<div class="form-group">
+		<label class="col-sm-4" for="dados_endereco">Endereço</label>
+		<span class="col-sm-8">
+			<input class="form-control" ng-model="dados.acervo.endereco" id="dados_endereco" name="dados_endereco" placeholder="" type="text" required>
+		</span>
+		</div>
+		<div class="form-group">
+			<!-- script combo estados -->
+			<label class="col-sm-2" for="dados_estado">Estado</label>
+			<span class="col-sm-1">
+			<select id="dados_estado" ng-model="dados.acervo.estado" name="dados_estado" combo-estado  required>
+			</select>
+			</span>
+			<label class="col-sm-2" for="dados_cidade">cidade</label>
+			<span class="col-sm-4">
+			<select class="col-sm-12" ng-model="dados.acervo.cidade" id="dados_cidade" name="dados_cidade"  required>
+			</select>
+			</span>
+			<label class="col-sm-1" for="dados_cep">CEP</label>
+			<span class="col-sm-2">
+			<input class="form-control" ng-model="dados.acervo.cep" id="dados_cep" name="dados_cep" type="text"  required>
+			</span>
+		</div>
+		<!-- fim script combo estados -->
+	<hr class="dotted">
+		<h2>Dados do responsável</h2>
+		<div class="form-group">
+		<label class="col-sm-4" for="dados_resp-nome">Responsável</label>
+		<span class="col-sm-8">
+			<input class="form-control" ng-model="dados.responsavel.nome" name="dados_nome" id="dados_nome" placeholder="" type="text"  required>
+		</span>
+		</div>
+		<div class="form-group">
+		<label class="col-sm-4" for="dados_resp-telefone-ddd">Telefone</label>
+		<span class="col-sm-2">
+			<input class="form-control" ng-model="dados.responsavel.telefone.ddd" name="dados_telefone_ddd" id="dados_telefone_ddd" placeholder="" type="text"  required>
+		</span>
+		<span class="col-sm-6">
+			<input class="form-control" ng-model="dados.responsavel.telefone.n" name="dados_telefone_n" id="dados_telefone_n" placeholder="" type="text" required>
+		</span>
 
-        </div>
-        <div class="form-group">
-        <label class="col-sm-4"  for="dados_resp-email">E-mail</label>
-        <span class="col-sm-8">
-          <input class="form-control" ng-model="dados.resp.email" id="dados_resp-email" type="email">
-        </span>
-        </div>
-        <div class="form-group">
-        <label class="col-sm-4" for="dados_resp-data">Data do cadastro</label>
-        <span class="col-sm-2">
-          <input class="form-control" ng-model="dados.resp.data" id="dados_resp-data" name="dados_resp-data" placeholder="__/__/__" type="text">
-        </span>
-        </div>
-        <hr class="dotted">
-        <div class="col-sm-offset-4 col-sm-3">
-         <button ng-click="mudapasso(1)" class="btn btn-primary btn-block">Próximo passo</button>
-        </div>
-      </form>
-    </div>
-    <!-- formulário de materiais -->
-    <div class="ng-scope" ng-if="passo == 2">
-      <h2>Detalhamento do tipo de Material</h2>
-      <hr class="dotted">
-      <form role="form" id="form_material" class="form-horizontal">
-        <div class="form-group">
-          <label class="row"><input ng-model="material.pelicula.show" value="1" type="checkbox"> Material em <strong>película</strong>?</label>
-        </div>
-        <div class="table-responsive" ng-show="material.pelicula.show" id="show_pelicula">
-          <table class="table table-condensed table-striped table-bordered">
-            <thead>
-            <tr ng-class="{success: CHK}"><th colspan="2" class="text-center">Material</th>
-            <th></th>
-            <th>Qte. Aproximada (pés, horas ou unidades)</th>
-            <th>Observações (qualidade, organização, conteúdo, etc)</th>
-            </tr></thead>
-            <tbody>
-            <tr ng-class="{success: material.bitola}">
-              <td rowspan="7" style="vertical-align: middle">Bitola</td>
-            </tr>
-            <tr ng-class="{success: material.bitola.16mm.true}">
-              <td>16mm</td>
-              <td><input class="form-control" ng-model="material.bitola.16mm.true" name="material_bitola-16mm" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.bitola.16mm.qte" name="material_bitola-16mm-qte" type="text"></td>
-              <td><textarea name="material_bitola-16mm-obs" class="form-control"></textarea></td>
-            </tr> 
-            <tr ng-class="{success: material.bitola.35mm.true}">
-              <td>35mm</td>
-              <td><input class="form-control" ng-model="material.bitola.35mm.true" name="material_bitola-35mm" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.bitola.35mm.qte" name="material_bitola-35mm-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.bitola.35mm.obs" name="material_bitola-35mm-obs" ></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.bitola.8mm.true}">
-              <td>8mm</td>
-              <td><input class="form-control" ng-model="material.bitola.8mm.true" name="material_bitola-8mm" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.bitola.8mm.qte" name="material_bitola-8mm-qte" type="text"></td>
-              <td><textarea ng-model="material.bitola.8mm.obs" name="material_bitola-8mm-obs" class="form-control"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.bitola.s8mm.true}">
-              <td>S8mm</td>
-              <td><input class="form-control" ng-model="material.bitola.s8mm.true" name="material_bitola-s8mm" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.bitola.s8mm.qte" name="material_bitola-s8mm-qte" type="text"></td>
-              <td><textarea ng-model="material.bitola.s8mm.obs" name="material_bitola-s8mm-obs" class="form-control"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.bitola.9_5mm.true}">
-              <td>9,5mm</td>
-              <td><input class="form-control" ng-model="material.bitola.9_5mm.true" name="material_bitola-9.5mm" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.bitola.9_5mm.qte" name="material_bitola-9.5mm" type="text"></td>
-              <td><textarea ng-model="material.bitola.9_5mm.obs" name="material_bitola-9.5mm-obs" class="form-control"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.bitola.outros.true}">
-              <td>Outros (especifique no campo "observação")</td>
-              <td><input class="form-control" ng-model="material.bitola.outros.true" name="material_bitola-outros" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.bitola.outros.qte" name="material_bitola-outros-qte" type="text"></td>
-              <td><textarea class="form-control"ng-model="material.bitola.outros.obs" name="material_bitola-outros-obs" ></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.negativo}">
-              <td rowspan="3" style="vertical-align: middle">Negativo original</td>
-            </tr>
-            <tr ng-class="{success: material.negativo.cor.true}">
-              <td>Cor</td>
-              <td><input class="form-control" ng-model="material.negativo.cor.true" name="material_negativo-cor" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.negativo.cor.qte" name="material_negativo-qte-cor" type="text"></td>
-              <td><textarea ng-model="material.negativo.cor.obs" name="material_negativo-cor-obs" class="form-control"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.negativo.pb.true}">
-              <td>pb</td>
-              <td><input class="form-control" ng-model="material.negativo.pb.true" name="material_negativo-pb" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.negativo.pb.qte" name="material_negativo-pb-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.negativo.pb.obs" name="material_negativo-pb-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.contratipo}">
-              <td rowspan="3" style="vertical-align: middle">Contratipo<br>(internegativo)</td>
-            </tr>
-            <tr ng-class="{success: material.contratipo.cor.true}">
-              <td>Cor</td>
-              <td><input class="form-control" ng-model="material.contratipo.cor.true" name="material_contratipo-cor" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.contratipo.cor.qte" name="material_contratipo-cor-obs" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.contratipo.cor.obs" name="material_contratipo-cor-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.contratipo.pb.true}">
-              <td>pb</td>
-              <td><input class="form-control" type="checkbox" ng-model="material.contratipo.pb.true" name="material_contratipo-pb"></td>
-              <td><input class="form-control" ng-model="material.contratipo.pb.qte" name="material_contratipo-pb-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.contratipo.pb.obs" name="material_contratipo-pb-qte"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.interpositivo}">
-              <td rowspan="3" style="vertical-align: middle">Máster<br>(interpositivo)</td>
-            </tr>
-            <tr ng-class="{success: material.interpositivo.cor.true}">
-              <td>Cor</td>
-              <td><input class="form-control" ng-model="material.interpositivo.co.truer" name="material_interpositivo-cor" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.interpositivo.cor.qte" name="material_interpositivo-cor-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.interpositivo.cor.obs" name="material_interpositivo-cor-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.interpositivo.pb.true}">
-              <td>pb</td>
-              <td><input class="form-control" ng-model="material.interpositivo.pb.true" name="material_interpositivo-pb" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.interpositivo.pb.qte" name="material_interpositivo-pb-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.interpositivo.pb.obs" name="material_interpositivo-pb-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.copia}">
-              <td rowspan="3" style="vertical-align: middle">Cópia</td>
-            </tr>
-            <tr ng-class="{success: material.copia.cor.true}">
-              <td>Cor</td>
-              <td><input class="form-control" ng-model="material.copia.cor.true" name="material_copia-cor" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.copia.cor.qte" name="material_copia-cor-qte" type="text"></td>
-              <td><textarea class="form-control" nd-model="material_copia-cor-obs" name="material_copia-cor-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.copia.pb.true}">
-              <td>pb</td>
-              <td><input class="form-control" ng-model="material.copia.pb.true" name="material_copia-pb" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.copia.pb.qte" name="material_copia-pb-qte" type="text"></td>
-              <td><textarea class="form-control" nd-model="material.copia-pb.obs" name="material_copia-pb-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.pelicula.outros}">
-              <td rowspan="3" style="vertical-align: middle">Outros<br>(ex: sobras, copião...)</td>
-            </tr>
-            <tr ng-class="{success: material.pelicula.outros.cor.true}">
-              <td>Cor</td>
-              <td><input class="form-control" ng-model="material.pelicula.outros.co.truer" name="material-pelicula-outros-cor" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.pelicula.outros.cor.qte" name="material-pelicula-outros-cor-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.pelicula.outros.cor.obs" name="material-pelicula-outros-cor-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.pelicula.outros.pb.true}">
-              <td>pb</td>
-              <td><input class="form-control" ng-model="material.pelicula.outros.pb.true" name="material-pelicula-outros-pb" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.pelicula.outros.pb.qte" name="material-pelicula-outros-pb-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.pelicula.outros.pb.obs" name="material-pelicula-outros-pb-obs"></textarea></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr class="dotted">
-        <div class="form-group">
-        <label class="row"><input ng-model="material.video.show" value="1" type="checkbox"> Material em <strong>vídeo</strong>?</label>
-        </div>
-        <div class="table-responsive" ng-show="material.video.show" id="show_pelicula">
-          <table class="table table-condensed table-striped table-bordered">
-            <thead>
-            <tr><th>Tipo</th>
-            <th></th>
-            <th>Qte. Aproximada (unidades, horas, etc.)</th>
-            <th>Observações (qualidade, organização, conteúdo, etc)</th>
-            </tr></thead>
-            <tbody>
-            <tr ng-class="{success: material.vhs.true}">
-              <td style="vertical-align: middle">VHS</td>
-              <td><input class="form-control" ng-model="material.vhs.true" name="material_vhs" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.vhs.qte" name="material_vhs-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.vhs.obs" name="material_vhs-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.umatic.true}">
-              <td style="vertical-align: middle">Umatic</td>
-              <td><input class="form-control" ng-model="material.umatic.true" name="material_umatic" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.umatic.qte" name="material_umatic-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.umatic.obs" name="material_umatic-qte"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.betamax.true}">
-              <td style="vertical-align: middle">Betamax</td>
-              <td><input class="form-control" ng-model="material.betamax.true" name="material_betamax" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.betamax.qte" name="material_betamax-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.betamax.obs" name="material_betamax-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.betacam.true}">
-              <td style="vertical-align: middle">Betacam</td>
-              <td><input class="form-control" ng-model="material.betacam.true" name="material_betacam" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.betacam.qte" name="material_betacam-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.betacam.obs" name="material_betacam-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.digital.true}">
-              <td style="vertical-align: middle">Digital</td>
-              <td><input class="form-control" ng-model="material.digita.truel" name="material_digital" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.digital.qte" name="material_digital-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.digital.obs" name="material_digital-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.dvd.true}">
-              <td style="vertical-align: middle">DVD</td>
-              <td><input class="form-control" ng-model="material.dvd.true" name="material_dvd" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.dvd.qte" name="material_dvd-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.dvd.obs" name="material_dvd-qte"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.video.outros.true}">
-              <td style="vertical-align: middle">Outros<br>(especifique no campo "observação")</td>
-              <td><input class="form-control" ng-model="material.video.outros.true" name="material_video-outros" type="checkbox"></td>
-              <td><input class="form-control" type="text" ng-model="material.video.outros.qte" name="material_video-outros-qte"></td>
-              <td><textarea class="form-control" ng-model="material.video.outros.obs" name="material_video-outros-obs"></textarea></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr class="dotted">
-        <div class="form-group">
-          <label class="row"><input ng-model="material.outros.show" value="1" type="checkbox"> Materiais correlatados (<strong>cartazes</strong>, <strong>fotos</strong>, etc)?</label>
-        </div>
-        <div class="table-responsive" ng-show="material.outros.show" id="show_outros">
-          <table class="table table-condensed table-striped table-bordered">
-            <thead>
-            <tr ng-class="{success: CHK}"><th>Tipo</th>
-            <th></th>
-            <th>Qte. Aproximada (unidades, caixas, etc.)</th>
-            <th>Observações (qualidade, organização, conteúdo, etc)</th>
-            </tr></thead>
-            <tbody>
-            <tr ng-class="{success: material.documentos.true}">
-              <td style="vertical-align: middle">Documentos</td>
-              <td><input class="form-control" ng-model="material.documentos.true" name="material_documentos" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.documentos.qts" name="material_documentos-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.documentos.obs" name="material_documentos-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.fotos.true}">
-              <td style="vertical-align: middle">Fotos</td>
-              <td><input class="form-control" ng-model="material.fotos.true" name="material_fotos" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.fotos.qte" name="material_fotos-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.fotos.obs" name="material_fotos-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.cartazes.true}">
-              <td style="vertical-align: middle">Cartazes</td>
-              <td><input class="form-control" ng-model="material.cartazes.true" name="material_cartazes" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.cartazes.qte" name="material_cartazes-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.cartazes.obs" name="material_cartazes-obs" ></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.audios.true}">
-              <td style="vertical-align: middle">Áudios</td>
-              <td><input class="form-control" ng-model="material.audios.true" name="material_audios" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.audios.qte" name="material_audios-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.audios.obs" name="material_audios-obs" ></textarea></td>
-            </tr>
-            <tr ng-class="{success: material.correlatados.outros.true}">
-              <td style="vertical-align: middle">Outros<br>(especifique no campo "observação")</td>
-              <td><input class="form-control" ng-model="material.correlatados.outros.true" name="material_correlatados-outros" type="checkbox"></td>
-              <td><input class="form-control" ng-model="material.correlatados.outros.qte" name="material_correlatados-outros-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="material.correlatados.outros.obs" name="material_correlatados-outros-obs" ></textarea></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr class="dotted">
-        <div class="col-sm-offset-4 col-sm-6">
-           <button ng-click="mudapasso(-1)" class="btn btn-warning">Passo anterior</button> <button ng-click="mudapasso(1)" class="btn btn-primary">Próximo passo</button>      
-        </div>
-      </form>
-    </div>
-    <div class="ng-scope" ng-if="passo == 3">
-      <h2>Informações sobre o acervo</h2>
-      <hr class="dotted">
-      <form role="form" id="form_material" class="form-horizontal">
-        <div class="table-responsive">
-          <h3>Catalogação</h3>
-          <table class="table table-condensed table-striped table-bordered">
-            <thead>
-            <tr><th colspan="2"></th>
-            <th>Qte. Aproximada (porcentagem)</th>
-            <th>Observações</th>
-            </tr></thead>
-            <tbody>
-            <tr ng-class="{success: acervo.incorporado.true}">
-              <td style="vertical-align: middle">Está incorporado?<br>
-                (com número de entrada ou número de tombo e com informações básicas de conteúdo e técnicas referentes ao material levantadas)</td>
-              <td><input class="form-control" ng-model="acervo.incorporado.true" name="acervo_incorporado" type="checkbox"></td>
-              <td><input class="form-control" ng-model="acervo.incorporado.qte" name="acervo_incorporado-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="acervo.incorporado.obs" name="acervo_incorporado-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: acervo.catalogado.true}">
-              <td style="vertical-align: middle">Está catalogado? <br>
-                (conteúdo descrito, sinopse, ficha técnica e/ou indexação)</td>
-              <td><input class="form-control" ng-model="acervo.catalogado.true" name="acervo_catalogado" type="checkbox"></td>
-              <td><input class="form-control" ng-model="acervo.catalogado.qte" name="acervo_catalogado-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="acervo.catalogado.obs" name="acervo_catalogado-obs" ></textarea></td>
-            </tr>
-            <tr ng-class="{success: acervo.documentado.true}">
-              <td style="vertical-align: middle">Está documentado?<br>
-                (possui certificação de direito)</td>
-              <td><input class="form-control" ng-model="acervo.documentado.true" name="acervo_documentado" type="checkbox"></td>
-              <td><input class="form-control" ng-model="acervo.documentado.qte" name="acervo_documentado-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="acervo.documentado.obs" name="acervo_documentado-obs" ></textarea></td>
-            </tr>
-            <tr ng-class="{success: acervo.indexado.true}">
-              <td style="vertical-align: middle">Está indexado?<br>
-                (possui sistema de controle de banco de dados)</td>
-              <td><input class="form-control" ng-model="acervo.indexado.true" name="acervo_indexado" type="checkbox"></td>
-              <td><input class="form-control" ng-model="acervo.indexado.qte" name="acervo_indexado-qte" type="text"></td>
-              <td><textarea class="form-control" ng-model="acervo.indexado.obs" name="acervo_indexado-obs" ></textarea></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr class="dotted">
-        <div class="table-responsive">
-          <h3>Banco de dados</h3>
-          <table class="table table-condensed table-striped table-bordered">
-            <thead>
-            <tr><th colspan="2"></th>
-            <th>Observações</th>
-            </tr></thead>
-            <tbody>
-            <tr ng-class="{success: banco.fichas.true}">
-              <td style="vertical-align: middle">Possui fichas em papel?</td>
-              <td><input class="form-control" ng-model="banco.fichas.true" name="banco_fichas" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="banco.fichas.obs" name="banco_fichas-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: banco.planilhas.true}">
-              <td style="vertical-align: middle">Possui planilhas em Excel?</td>
-              <td><input class="form-control" ng-model="banco.planilhas.true" name="banco_planilhas" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="banco.planilhas.obs" name="banco_planilhas-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: banco.base.true}">
-              <td style="vertical-align: middle">Possui base de dados?</td>
-              <td><input class="form-control" ng-model="banco.base.true" name="banco_base" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="banco.base.obs" name="banco_base-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: banco.internet.true}">
-              <td style="vertical-align: middle">Os dados estão disponíveis na internet?</td>
-              <td><input class="form-control" ng-model="banco.internet.true" name="banco_internet" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="banco.internet.obs" ></textarea></td>
-            </tr>
-            <tr ng-class="{success: banco.publico.true}">
-              <td style="vertical-align: middle">Os dados são de acesso público?</td>
-              <td><input class="form-control" ng-model="banco.publico.true" name="banco_publico" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="banco.publico.obs" name="banco_publico-obs"></textarea></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <hr class="dotted">
-        <div class="table-responsive">
-          <h3>Tipo do depósito</h3>
-          <table class="table table-condensed table-striped table-bordered">
-            <thead>
-            <tr><th colspan="2"></th>
-            <th>Observações</th>
-            </tr></thead>
-            <tbody>
-            <tr ng-class="{success: deposito.apropriado}">
-              <td style="vertical-align: middle">Possui área apropriada para guarda do acervo?</td>
-              <td><input class="form-control" ng-model="deposito.apropriado" name="deposito_apropriado" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="deposito.apropriado.obs" name="deposito_apropriado-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: deposito.climatizado}">
-              <td style="vertical-align: middle">As áreas estão climatizadas?</td>
-              <td><input class="form-control" ng-model="deposito.climatizado" name="deposito_climatizado" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="deposito.climatizado.obs" name="deposito_climatizado-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: deposito.arquivamento}">
-              <td style="vertical-align: middle">Possui condições de arquivamento?</td>
-              <td><input class="form-control" ng-model="deposito.arquivamento" name="deposito_arquivamento" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="deposito.arquivamento.obs" name="deposito_arquivamento-obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: deposito.embalagens}">
-              <td style="vertical-align: middle">Possui embalagens adequadas?</td>
-              <td><input class="form-control" ng-model="deposito.embalagens" name="deposito_embalagens" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="deposito.embalagens.obs"></textarea></td>
-            </tr>
-            <tr ng-class="{success: deposito.mobiliario}">
-              <td style="vertical-align: middle">Possui mobiliário adequado?</td>
-              <td><input class="form-control" ng-model="deposito.mobiliario" name="deposito_mobiliario" type="checkbox"></td>
-              <td><textarea class="form-control" ng-model="deposito.mobiliario.obs" name="deposito_mobiliario-obs"></textarea></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-sm-offset-4 col-sm-6">
-           <button ng-click="mudapasso(-1)" class="btn btn-warning">Passo anterior</button> <button ng-click="mudapasso(1)" class="btn btn-primary">Próximo passo</button>      
-        </div>
-      </form>
-    </div>
-    <div class="ng-scope" ng-if="passo == 4">
-      <h2>Resumo do formulário</h2>
-      <p>Confira as informações preenchidas e retorne aos passos anteriores para alterá-las</p>
-      <div>
-      {{dados}}
-      </div>
-      <div>
-      {{material}}
-      </div>
-      <div>
-      {{acervo}}
-      </div>
-      <div>
-      {{banco}}
-      </div>
-      <div>
-      {{deposito}}
-      </div>
-        <div class="col-sm-offset-4 col-sm-6">
-           <button ng-click="mudapasso(-1)" class="btn btn-warning">Passo anterior</button> <button ng-click="mudapasso(1)" class="btn btn-success">Enviar dados</button>     
-        </div>
-
-    </div>
+		</div>
+		<div class="form-group">
+		<label class="col-sm-4"  for="dados_resp-email">E-mail</label>
+		<span class="col-sm-8">
+			<input class="form-control" ng-model="dados.responsavel.email" id="dados_email" type="email"  required>
+		</span>
+		</div>
+		<div class="form-group">
+		<label class="col-sm-4" for="dados_resp-data">Data do cadastro</label>
+		<span class="col-sm-2">
+			<input class="form-control" ng-model="dados.responsavel.data" id="dados_data" name="dados_data" placeholder="__/__/__" type="text"  required>
+		</span>
+		</div>
+		<hr class="dotted">
+		<p ng-show="formDados.$invalid" class="col-sm-offset-4 bg-warning">&emsp;Por favor preencha todos os campos acima</p>
+		<div class="col-sm-offset-4 col-sm-3">
+			<button ng-click="mudapasso(1)" ng-disabled="formDados.$invalid" class="btn btn-primary btn-block">Próximo passo</button>
+		</div>
+	</form>
+</div>
+<!-- formulário de materiais -->
+<div class="ng-scope" ng-show="passo == 1">
+	<h2>Detalhamento do tipo de Material</h2>
+	<hr class="dotted">
+	<form role="form" id="form_material" class="form-horizontal">
+		<div class="form-group">
+			<label class="row"><input ng-model="material.pelicula.show" ng-value="1" type="checkbox"> Material em <strong>película</strong>?</label>
+		</div>
+		<div class="table-responsive" ng-show="material.pelicula.show" id="show_pelicula">
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2" class="text-center">Material</th>
+				<th></th>
+				<th>Qte. Aproximada (pés, horas ou unidades)</th>
+				<th>Observações (qualidade, organização, conteúdo, etc)</th>
+				</tr></thead>
+				<tbody>
+				<tr ng-class="{success: material.bitola}">
+					<td rowspan="7" style="vertical-align: middle">Bitola</td>
+				</tr>
+				<tr ng-class="{success: material.bitola.mm16.sim}">
+					<td>16mm</td>
+					<td><input class="form-control" ng-model="material.bitola.mm16.sim" name="material_pelicula_16" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.bitola.mm16.qte" name="material_pelicula_16_qte" type="text" /></td>
+					<td><textarea name="material_pelicula_16_obs" class="form-control"></textarea></td>
+				</tr> 
+				<tr ng-class="{success: material.bitola.mm35.sim}">
+					<td>35mm</td>
+					<td><input class="form-control" ng-model="material.bitola.mm35.sim" name="material_pelicula_35" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.bitola.mm35.qte" name="material_pelicula_35_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.bitola.mm35.obs" name="material_pelicula_35_obs" ></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.bitola.mm8.sim}">
+					<td>8mm</td>
+					<td><input class="form-control" ng-model="material.bitola.mm8.sim" name="material_pelicula_8" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.bitola.mm8.qte" name="material_pelicula_8_qte" type="text" /></td>
+					<td><textarea ng-model="material.bitola.mm8.obs" name="material_pelicula_8_obs" class="form-control"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.bitola.mms8.sim}">
+					<td>S8mm</td>
+					<td><input class="form-control" ng-model="material.bitola.mms8.sim" name="material_pelicula_s8" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.bitola.mms8.qte" name="material_pelicula_s8_qte" type="text" /></td>
+					<td><textarea ng-model="material.bitola.mms8.obs" name="material_pelicula_s8_obs" class="form-control"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.bitola.mm9_5.sim}">
+					<td>9,5mm</td>
+					<td><input class="form-control" ng-model="material.bitola.mm9_5.sim" name="material_pelicula_95" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.bitola.mm9_5.qte" name="material_pelicula_95_qte" type="text" /></td>
+					<td><textarea ng-model="material.bitola.mm9_5.obs" name="material_pelicula_95_obs" class="form-control"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.bitola.outros.sim}">
+					<td>Outros (especifique no campo "observação")</td>
+					<td><input class="form-control" ng-model="material.bitola.outros.sim" name="material_pelicula_outros" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.bitola.outros.qte" name="material_pelicula_outros_qte" type="text" /></td>
+					<td><textarea class="form-control"ng-model="material.bitola.outros.obs" name="material_pelicula_outros_obs" ></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.negativo}">
+					<td rowspan="3" style="vertical-align: middle">Negativo original</td>
+				</tr>
+				<tr ng-class="{success: material.negativo.cor.sim}">
+					<td>Cor</td>
+					<td><input class="form-control" ng-model="material.negativo.cor.sim" name="material_pelicula_negativo_cor" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.negativo.cor.qte" name="material_pelicula_negativo_qte_cor" type="text" /></td>
+					<td><textarea ng-model="material.negativo.cor.obs" name="material_pelicula_negativo_cor_obs" class="form-control"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.negativo.pb.sim}">
+					<td>pb</td>
+					<td><input class="form-control" ng-model="material.negativo.pb.sim" name="material_pelicula_negativo_pb" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.negativo.pb.qte" name="material_pelicula_negativo_pb_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.negativo.pb.obs" name="material_pelicula_negativo_pb_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.contratipo}">
+					<td rowspan="3" style="vertical-align: middle">Contratipo<br>(internegativo)</td>
+				</tr>
+				<tr ng-class="{success: material.contratipo.cor.sim}">
+					<td>Cor</td>
+					<td><input class="form-control" ng-model="material.contratipo.cor.sim" name="material_pelicula_contratipo_cor" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.contratipo.cor.qte" name="material_pelicula_contratipo_cor_obs" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.contratipo.cor.obs" name="material_pelicula_contratipo_cor_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.contratipo.pb.sim}">
+					<td>pb</td>
+					<td><input class="form-control" type="checkbox" ng-model="material.contratipo.pb.sim" name="material_pelicula_contratipo_pb"></td>
+					<td><input class="form-control" ng-model="material.contratipo.pb.qte" name="material_pelicula_contratipo_pb_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.contratipo.pb.obs" name="material_pelicula_contratipo_pb_qte"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.interpositivo}">
+					<td rowspan="3" style="vertical-align: middle">Máster<br>(interpositivo)</td>
+				</tr>
+				<tr ng-class="{success: material.interpositivo.cor.sim}">
+					<td>Cor</td>
+					<td><input class="form-control" ng-model="material.interpositivo.cor.sim" name="material_pelicula_interpositivo_cor" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.interpositivo.cor.qte" name="material_pelicula_interpositivo_cor_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.interpositivo.cor.obs" name="material_pelicula_interpositivo_cor_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.interpositivo.pb.sim}">
+					<td>pb</td>
+					<td><input class="form-control" ng-model="material.interpositivo.pb.sim" name="material_pelicula_interpositivo_pb" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.interpositivo.pb.qte" name="material_pelicula_interpositivo_pb_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.interpositivo.pb.obs" name="material_pelicula_interpositivo_pb_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.copia}">
+					<td rowspan="3" style="vertical-align: middle">Cópia</td>
+				</tr>
+				<tr ng-class="{success: material.copia.cor.sim}">
+					<td>Cor</td>
+					<td><input class="form-control" ng-model="material.copia.cor.sim" name="material_pelicula_copia_cor" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.copia.cor.qte" name="material_pelicula_copia_cor_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.copia.cor.obs" name="material_pelicula_copia_cor_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.copia.pb.sim}">
+					<td>pb</td>
+					<td><input class="form-control" ng-model="material.copia.pb.sim" name="material_pelicula_copia_pb" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.copia.pb.qte" name="material_pelicula_copia_pb_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.copia.pb.obs" name="material_pelicula_copia_pb_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.pelicula.outros}">
+					<td rowspan="3" style="vertical-align: middle">Outros<br>(ex: sobras, copião...)</td>
+				</tr>
+				<tr ng-class="{success: material.pelicula.outros.cor.sim}">
+					<td>Cor</td>
+					<td><input class="form-control" ng-model="material.pelicula.outros.cor.sim" name="material_pelicula_outros_cor" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.pelicula.outros.cor.qte" name="material_pelicula_outros_cor_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.pelicula.outros.cor.obs" name="material_pelicula_outros_cor_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.pelicula.outros.pb.sim}">
+					<td>pb</td>
+					<td><input class="form-control" ng-model="material.pelicula.outros.pb.sim" name="material_pelicula_outros_pb" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.pelicula.outros.pb.qte" name="material_pelicula_outros_pb_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.pelicula.outros.pb.obs" name="material_pelicula_outros_pb_obs"></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="form-group">
+		<label class="row"><input ng-model="material.video.show" ng-value="1" type="checkbox"> Material em <strong>vídeo</strong>?</label>
+		</div>
+		<div class="table-responsive" ng-show="material.video.show" id="show_pelicula">
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th>Tipo</th>
+				<th></th>
+				<th>Qte. Aproximada (unidades, horas, etc.)</th>
+				<th>Observações (qualidade, organização, conteúdo, etc)</th>
+				</tr></thead>
+				<tbody>
+				<tr ng-class="{success: material.vhs.sim}">
+					<td style="vertical-align: middle">VHS</td>
+					<td><input class="form-control" ng-model="material.vhs.sim" name="material_vhs" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.vhs.qte" name="material_vhs_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.vhs.obs" name="material_vhs_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.umatic.sim}">
+					<td style="vertical-align: middle">Umatic</td>
+					<td><input class="form-control" ng-model="material.umatic.sim" name="material_umatic" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.umatic.qte" name="material_umatic_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.umatic.obs" name="material_umatic_qte"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.betamax.sim}">
+					<td style="vertical-align: middle">Betamax</td>
+					<td><input class="form-control" ng-model="material.betamax.sim" name="material_betamax" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.betamax.qte" name="material_betamax_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.betamax.obs" name="material_betamax_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.betacam.sim}">
+					<td style="vertical-align: middle">Betacam</td>
+					<td><input class="form-control" ng-model="material.betacam.sim" name="material_betacam" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.betacam.qte" name="material_betacam_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.betacam.obs" name="material_betacam_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.digital.sim}">
+					<td style="vertical-align: middle">Digital</td>
+					<td><input class="form-control" ng-model="material.digital.sim" name="material_digital" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.digital.qte" name="material_digital_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.digital.obs" name="material_digital_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.dvd.sim}">
+					<td style="vertical-align: middle">DVD</td>
+					<td><input class="form-control" ng-model="material.dvd.sim" name="material_dvd" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.dvd.qte" name="material_dvd_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.dvd.obs" name="material_dvd_qte"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.video.outros.sim}">
+					<td style="vertical-align: middle">Outros<br>(especifique no campo "observação")</td>
+					<td><input class="form-control" ng-model="material.video.outros.sim" name="material_video_outros" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" type="text" ng-model="material.video.outros.qte" name="material_video_outros_qte"></td>
+					<td><textarea class="form-control" ng-model="material.video.outros.obs" name="material_video_outros_obs"></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="form-group">
+			<label class="row"><input ng-model="material.outros.show" ng-value="1" type="checkbox"> Materiais correlatados (<strong>cartazes</strong>, <strong>fotos</strong>, etc)?</label>
+		</div>
+		<div class="table-responsive" ng-show="material.outros.show" id="show_outros">
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th>Tipo</th>
+				<th></th>
+				<th>Qte. Aproximada (unidades, caixas, etc.)</th>
+				<th>Observações (qualidade, organização, conteúdo, etc)</th>
+				</tr></thead>
+				<tbody>
+				<tr ng-class="{success: material.documentos.sim}">
+					<td style="vertical-align: middle">Documentos</td>
+					<td><input class="form-control" ng-model="material.documentos.sim" name="material_documentos" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.documentos.qts" name="material_documentos_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.documentos.obs" name="material_documentos_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.fotos.sim}">
+					<td style="vertical-align: middle">Fotos</td>
+					<td><input class="form-control" ng-model="material.fotos.sim" name="material_fotos" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.fotos.qte" name="material_fotos_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.fotos.obs" name="material_fotos_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.cartazes.sim}">
+					<td style="vertical-align: middle">Cartazes</td>
+					<td><input class="form-control" ng-model="material.cartazes.sim" name="material_cartazes" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.cartazes.qte" name="material_cartazes_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.cartazes.obs" name="material_cartazes_obs" ></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.audios.sim}">
+					<td style="vertical-align: middle">Áudios</td>
+					<td><input class="form-control" ng-model="material.audios.sim" name="material_audios" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.audios.qte" name="material_audios_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.audios.obs" name="material_audios_obs" ></textarea></td>
+				</tr>
+				<tr ng-class="{success: material.correlatados.outros.sim}">
+					<td style="vertical-align: middle">Outros<br>(especifique no campo "observação")</td>
+					<td><input class="form-control" ng-model="material.correlatados.outros.sim" name="material_correlatados-outros" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="material.correlatados.outros.qte" name="material_correlatados-outros_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="material.correlatados.outros.obs" name="material_correlatados-outros_obs" ></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="col-sm-offset-4 col-sm-6">
+			 <button ng-click="mudapasso(-1)" class="btn btn-warning">Passo anterior</button> <button ng-click="mudapasso(1)" class="btn btn-primary">Próximo passo</button>      
+		</div>
+	</form>
+</div>
+<div class="ng-scope"  ng-show="passo == 1">
+	<h2>Informações sobre o acervo</h2>
+	<hr class="dotted">
+	<form role="form" id="form_material" class="form-horizontal">
+		<div class="table-responsive">
+			<h3>Catalogação</h3>
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2"></th>
+				<th>Qte. Aproximada (porcentagem)</th>
+				<th>Observações</th>
+				</tr></thead>
+				<tbody>
+				<tr ng-class="{success: catalogacao.incorporado.sim}">
+					<td style="vertical-align: middle">Está incorporado?<br>
+						(com número de entrada ou número de tombo e com informações básicas de conteúdo e técnicas referentes ao material levantadas)</td>
+					<td><input class="form-control" ng-model="catalogacao.incorporado.sim" name="acervo_incorporado" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="catalogacao.incorporado.qte" name="acervo_incorporado_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="catalogacao.incorporado.obs" name="acervo_incorporado_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: catalogacao.catalogado.sim}">
+					<td style="vertical-align: middle">Está catalogado? <br>
+						(conteúdo descrito, sinopse, ficha técnica e/ou indexação)</td>
+					<td><input class="form-control" ng-model="catalogacao.catalogado.sim" name="acervo_catalogado" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="catalogacao.catalogado.qte" name="acervo_catalogado_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="catalogacao.catalogado.obs" name="acervo_catalogado_obs" ></textarea></td>
+				</tr>
+				<tr ng-class="{success: catalogacao.documentado.sim}">
+					<td style="vertical-align: middle">Está documentado?<br>
+						(possui certificação de direito)</td>
+					<td><input class="form-control" ng-model="catalogacao.documentado.sim" name="acervo_documentado" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="catalogacao.documentado.qte" name="acervo_documentado_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="catalogacao.documentado.obs" name="acervo_documentado_obs" ></textarea></td>
+				</tr>
+				<tr ng-class="{success: catalogacao.indexado.sim}">
+					<td style="vertical-align: middle">Está indexado?<br>
+						(possui sistema de controle de banco de dados)</td>
+					<td><input class="form-control" ng-model="catalogacao.indexado.sim" name="acervo_indexado" ng-value="sim" type="checkbox" /></td>
+					<td><input class="form-control" ng-model="catalogacao.indexado.qte" name="acervo_indexado_qte" type="text" /></td>
+					<td><textarea class="form-control" ng-model="catalogacao.indexado.obs" name="acervo_indexado_obs" ></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="table-responsive">
+			<h3>Banco de dados</h3>
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2"></th>
+				<th>Observações</th>
+				</tr></thead>
+				<tbody>
+				<tr ng-class="{success: banco.fichas.sim}">
+					<td style="vertical-align: middle">Possui fichas em papel?</td>
+					<td><input class="form-control" ng-model="banco.fichas.sim" name="banco_fichas" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="banco.fichas.obs" name="banco_fichas_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: banco.planilhas.sim}">
+					<td style="vertical-align: middle">Possui planilhas em Excel?</td>
+					<td><input class="form-control" ng-model="banco.planilhas.sim" name="banco_planilhas" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="banco.planilhas.obs" name="banco_planilhas_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: banco.base.sim}">
+					<td style="vertical-align: middle">Possui base de dados?</td>
+					<td><input class="form-control" ng-model="banco.base.sim" name="banco_base" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="banco.base.obs" name="banco_base_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: banco.internet.sim}">
+					<td style="vertical-align: middle">Os dados estão disponíveis na internet?</td>
+					<td><input class="form-control" ng-model="banco.internet.sim" name="banco_internet" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="banco.internet.obs" ></textarea></td>
+				</tr>
+				<tr ng-class="{success: banco.publico.sim}">
+					<td style="vertical-align: middle">Os dados são de acesso público?</td>
+					<td><input class="form-control" ng-model="banco.publico.sim" name="banco_publico" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="banco.publico.obs" name="banco_publico_obs"></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="table-responsive">
+			<h3>Tipo do depósito</h3>
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2"></th>
+				<th>Observações</th>
+				</tr></thead>
+				<tbody>
+				<tr ng-class="{success: deposito.apropriado.sim}">
+					<td style="vertical-align: middle">Possui área apropriada para guarda do acervo?</td>
+					<td><input class="form-control" ng-model="deposito.apropriado.sim" name="deposito_apropriado" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="deposito.apropriado.obs" name="deposito_apropriado_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: deposito.climatizado.sim}">
+					<td style="vertical-align: middle">As áreas estão climatizadas?</td>
+					<td><input class="form-control" ng-model="deposito.climatizado.sim" name="deposito_climatizado" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="deposito.climatizado.obs" name="deposito_climatizado_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: deposito.arquivamento.sim}">
+					<td style="vertical-align: middle">Possui condições de arquivamento?</td>
+					<td><input class="form-control" ng-model="deposito.arquivamento.sim" name="deposito_arquivamento" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="deposito.arquivamento.obs" name="deposito_arquivamento_obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: deposito.embalagens.sim}">
+					<td style="vertical-align: middle">Possui embalagens adequadas?</td>
+					<td><input class="form-control" ng-model="deposito.embalagens.sim" name="deposito_embalagens" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="deposito.embalagens.obs"></textarea></td>
+				</tr>
+				<tr ng-class="{success: deposito.mobiliario.sim}">
+					<td style="vertical-align: middle">Possui mobiliário adequado?</td>
+					<td><input class="form-control" ng-model="deposito.mobiliario.sim" name="deposito_mobiliario" ng-value="sim" type="checkbox" /></td>
+					<td><textarea class="form-control" ng-model="deposito.mobiliario.obs" name="deposito_mobiliario_obs"></textarea></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-sm-offset-4 col-sm-6">
+			 <button ng-click="mudapasso(-1)" class="btn btn-warning">Passo anterior</button> <button ng-click="mudapasso(1)" class="btn btn-primary">Próximo passo</button>      
+		</div>
+	</form>
+</div>
+<div class="ng-scope" ng-show="passo > 0">
+	<form name="formFinal" action="enviar.php" method="POST">
+	<h2>Resumo do formulário</h2>
+	<hr />
+	<p>Confira as informações preenchidas e retorne aos passos anteriores para alterá-las</p>
+	<hr class="dotted" />
+	<div class="ng-scope" ng-show="passo == 1">
+		<h2>Dados Gerais</h2>
+		<hr />
+			<h3>Acervo</h3>
+			<p><strong>Identificação:</strong> {{dados.acervo.id}}<input value="{{dados.acervo.id}}" type="hidden" name="dados_id" ></p>
+			<p><strong>Nome do arquivo:</strong> {{dados.acervo.nome}}<input tvalue="{{dados.acervo.nome}}" ype="hidden" name="dados_nome" ></p>
+			<p><strong>Endereço:</strong> {{dados.acervo.endereco}}<input value="{{dados.acervo.endereco}}" type="hidden" name="dados_endereco" ></p>
+			<p><strong>Cidade:</strong> {{dados.acervo.cidade}}<input value="{{dados.acervo.cidade}}" type="hidden" name="dados_cidade" ></p>
+			<p><strong>Estado:</strong> {{dados.acervo.estado}}<input value="{{dados.acervo.estado}}" type="hidden" name="dados_estado" ></p>
+			<p><strong>CEP:</strong> {{dados.acervo.cep}}<input value="{{dados.acervo.cep}}" type="hidden" name="dados_cep" ></p>
+			<hr class="dotted" />
+			<h3>Responsável</h3>
+			<p><strong>Responsável:</strong> {{dados.responsavel.nome}}<input value="{{dados.acervo.responsavel}}" type="hidden" name="dados_responsavel" ></p>
+			<p><strong>Telefone:</strong> ({{dados.responsavel.telefone.ddd}}) {{dados.responsavel.telefone.n}}<input value="({{dados.responsavel.telefone.ddd}}) {{dados.responsavel.telefone.n}}" type="hidden" name="dados_telefone" ></p>
+			<p><strong>Email:</strong> {{dados.responsavel.email}}<input value="{{dados.acervo.email}}" type="hidden" name="dados_email" ></p>
+		</div>
+		<hr class="dotted" />
+		<h2>Material do acervo</h2>
+		<hr class="dotted">
+		<h3>Material em película</h3>
+		<div class="table-responsive" id="show_pelicula">
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2" class="text-center">Material</th>
+				<th></th>
+				<th>Qte. Aproximada (pés, horas ou unidades)</th>
+				<th>Observações (qualidade, organização, conteúdo, etc)</th>
+				</tr></thead>
+				<tbody>
+				<tr>
+					<td rowspan="7" style="vertical-align: middle">Bitola</p></td>
+				</tr>
+				<tr>
+					<td>16mm</p></td>
+					<td ng-class="{'bg-success': material.bitola.mm16.sim}"><input type="hidden" name="material_pelicula_bitola_16" ></p></td>
+					<td><p>{{material.bitola.mm16.qte}}<input type="hidden" name="material_pelicula_bitola_16_qte"></p></td>
+					<td><p>{{material.bitola.mm16.obs}}<input type="hidden" name="material_pelicula_bitola_16_obs"></p></td>
+				</tr> 
+				<tr>
+					<td>35mm</p></td>
+					<td ng-class="{'bg-success': material.bitola.mm35.sim}"><input type="hidden" name="material_pelicula_bitola_35" ></p></td>
+					<td><p>{{material.bitola.mm35.qte}}<input type="hidden" name="material_pelicula_bitola_35_qte"></p></td>
+					<td><p>{{material.bitola.mm35.obs}}<input type="hidden" name="material_pelicula_bitola_35_obs" ></p></td>
+				</tr>
+				<tr>
+					<td>8mm</p></td>
+					<td ng-class="{'bg-success': material.bitola.mm8.sim}"><input type="hidden" name="material_pelicula_bitola_8" ></p></td>
+					<td><p>{{material.bitola.mm8.qte}}<input type="hidden" name="material_pelicula_bitola_8_qte"></p></td>
+					<td><p>{{material.bitola.mm8.obs}}<input type="hidden" name="material_pelicula_bitola_8_obs" ></p></td>
+				</tr>
+				<tr>
+					<td>S8mm</p></td>
+					<td ng-class="{'bg-success': material.bitola.mms8.sim}"><input type="hidden" name="material_pelicula_bitola_s8" ></p></td>
+					<td><p>{{material.bitola.mms8.qte}}<input type="hidden" name="material_pelicula_bitola_s8_qte"></p></td>
+					<td><p>{{material.bitola.mms8.obs}}<input type="hidden" name="material_pelicula_bitola_s8_obs" ></p></td>
+				</tr>
+				<tr>
+					<td>9,5mm</p></td>
+					<td ng-class="{'bg-success': material.bitola.mm9_5.sim}"><input type="hidden" name="material_pelicula_bitola_95" ></p></td>
+					<td><p>{{material.bitola.mm9_5.qte}}<input type="hidden" name="material_pelicula_bitola_95"></p></td>
+					<td><p>{{material.bitola.mm9_5.obs}}<input type="hidden" name="material_pelicula_bitola_95_obs" ></p></td>
+				</tr>
+				<tr>
+					<td>Outros (especifique no campo "observação")</p></td>
+					<td ng-class="{'bg-success': material.bitola.outros.sim}"><input type="hidden" name="material_pelicula_bitola_outros" ></p></td>
+					<td><p>{{material.bitola.outros.qte}}<input type="hidden" name="material_pelicula_bitola_outros_qte"></p></td>
+					<td><p>{{material.bitola.outros.obs}}<input type="hidden" name="material_pelicula_bitola_outros_obs" ></p></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="vertical-align: middle">Negativo original</p></td>
+				</tr>
+				<tr>
+					<td>Cor</p></td>
+					<td ng-class="{'bg-success': material.negativo.cor.sim}"><input type="hidden" name="material_pelicula_negativo_cor" ></p></td>
+					<td><p>{{material.negativo.cor.qte}}<input type="hidden" name="material_pelicula_negativo_qte_cor"></p></td>
+					<td><p>{{material.negativo.cor.obs}}<input type="hidden" name="material_pelicula_negativo_cor_obs" ></p></td>
+				</tr>
+				<tr>
+					<td>pb</p></td>
+					<td ng-class="{'bg-success': material.negativo.pb.sim}"><input type="hidden" name="material_pelicula_negativo_pb" ></p></td>
+					<td><p>{{material.negativo.pb.qte}}<input type="hidden" name="material_pelicula_negativo_pb_qte"></p></td>
+					<td><p>{{material.negativo.pb.obs}}<input type="hidden" name="material_pelicula_negativo_pb_obs"></p></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="vertical-align: middle">Contratipo<br>(internegativo)</p></td>
+				</tr>
+				<tr>
+					<td>Cor</p></td>
+					<td ng-class="{'bg-success': material.contratipo.cor.sim}"><input type="hidden" name="material_pelicula_contratipo_cor" ></p></td>
+					<td><p>{{material.contratipo.cor.qte}}<input type="hidden" name="material_pelicula_contratipo_cor_obs"></p></td>
+					<td><p>{{material.contratipo.cor.obs}}<input type="hidden" name="material_pelicula_contratipo_cor_obs"></p></td>
+				</tr>
+				<tr>
+					<td>pb</p></td>
+					<td ng-class="{'bg-success': material.contratipo.pb.sim}"><input type="hidden" name="material_pelicula_contratipo_pb"></p></td>
+					<td><p>{{material.contratipo.pb.qte}}<input type="hidden" name="material_pelicula_contratipo_pb_qte"></p></td>
+					<td><p>{{material.contratipo.pb.obs}}<input type="hidden" name="material_pelicula_contratipo_pb_qte"></p></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="vertical-align: middle">Máster<br>(interpositivo)</p></td>
+				</tr>
+				<tr>
+					<td>Cor</p></td>
+					<td ng-class="{'bg-success': material.interpositivo.co.sim}"><input type="hidden" name="material_pelicula_interpositivo_cor" ></p></td>
+					<td><p>{{material.interpositivo.cor.qte}}<input type="hidden" name="material_pelicula_interpositivo_cor_qte"></p></td>
+					<td><p>{{material.interpositivo.cor.obs}}<input type="hidden" name="material_pelicula_interpositivo_cor_obs"></p></td>
+				</tr>
+				<tr>
+					<td>pb</p></td>
+					<td ng-class="{'bg-success': material.interpositivo.pb.sim}"><input type="hidden" name="material_pelicula_interpositivo_pb" ></p></td>
+					<td><p>{{material.interpositivo.pb.qte}}<input type="hidden" name="material_pelicula_interpositivo_pb_qte"></p></td>
+					<td><p>{{material.interpositivo.pb.obs}}<input type="hidden" name="material_pelicula_interpositivo_pb_obs"></p></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="vertical-align: middle">Cópia</p></td>
+				</tr>
+				<tr>
+					<td>Cor</p></td>
+					<td ng-class="{'bg-success': material.copia.cor.sim}"><input type="hidden" name="material_pelicula_copia_cor" ></p></td>
+					<td><p>{{material.copia.cor.qte}}<input type="hidden" name="material_pelicula_copia_cor_qte"></p></td>
+					<td><p>{{material.copia.cor.obs}}<input type="hidden" name="material_pelicula_copia_cor_obs"></p></td>
+				</tr>
+				<tr>
+					<td>pb</p></td>
+					<td ng-class="{'bg-success': material.copia.pb.sim}"><input type="hidden" name="material_pelicula_copia_pb" ></p></td>
+					<td><p>{{material.copia.pb.qte}}<input type="hidden" name="material_pelicula_copia_pb_qte"></p></td>
+					<td><p>{{material.copia.pb.obs}}<input type="hidden" name="material_pelicula_copia_pb_obs"></p></td>
+				</tr>
+				<tr>
+					<td rowspan="3" style="vertical-align: middle">Outros<br>(ex: sobras, copião...)</p></td>
+				</tr>
+				<tr>
+					<td>Cor</p></td>
+					<td ng-class="{'bg-success': material.pelicula.outros.co.sim}"><input type="hidden" name="material_pelicula_outros_cor" ></p></td>
+					<td><p>{{material.pelicula.outros.cor.qte}}<input type="hidden" name="material_pelicula_outros_cor_qte"></p></td>
+					<td><p>{{material.pelicula.outros.cor.obs}}<input type="hidden" name="material_pelicula_outros_cor_obs"></p></td>
+				</tr>
+				<tr>
+					<td>pb</p></td>
+					<td ng-class="{'bg-success': material.pelicula.outros.pb.sim}"><input type="hidden" name="material_pelicula_outros_pb" ></p></td>
+					<td><p>{{material.pelicula.outros.pb.qte}}<input type="hidden" name="material_pelicula_outros_pb_qte"></p></td>
+					<td><p>{{material.pelicula.outros.pb.obs}}<input type="hidden" name="material_pelicula_outros_pb_obs"></p></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="form-group">
+		<h3>Material em video</h3>
+		<div class="table-responsive" id="show_pelicula">
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th>Tipo</th>
+				<th></th>
+				<th>Qte. Aproximada (unidades, horas, etc.)</th>
+				<th>Observações (qualidade, organização, conteúdo, etc)</th>
+				</tr></thead>
+				<tbody>
+				<tr>
+					<td style="vertical-align: middle">VHS</p></td>
+					<td ng-class="{'bg-success': material.vhs.sim}"><input type="hidden" name="material_video_vhs" ></p></td>
+					<td><p>{{material.vhs.qte}}<input type="hidden" name="material_video_vhs_qte"></p></td>
+					<td><p>{{material.vhs.obs}}<input type="hidden" name="material_video_vhs_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Umatic</p></td>
+					<td ng-class="{'bg-success': material.umatic.sim}"><input type="hidden" name="material_video_umatic" ></p></td>
+					<td><p>{{material.umatic.qte}}<input type="hidden" name="material_video_umatic_qte"></p></td>
+					<td><p>{{material.umatic.obs}}<input type="hidden" name="material_video_umatic_qte"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Betamax</p></td>
+					<td ng-class="{'bg-success': material.betamax.sim}"><input type="hidden" name="material_video_betamax" ></p></td>
+					<td><p>{{material.betamax.qte}}<input type="hidden" name="material_video_betamax_qte"></p></td>
+					<td><p>{{material.betamax.obs}}<input type="hidden" name="material_video_betamax_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Betacam</p></td>
+					<td ng-class="{'bg-success': material.betacam.sim}"><input type="hidden" name="material_video_betacam" ></p></td>
+					<td><p>{{material.betacam.qte}}<input type="hidden" name="material_video_betacam_qte"></p></td>
+					<td><p>{{material.betacam.obs}}<input type="hidden" name="material_video_betacam_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Digital</p></td>
+					<td ng-class="{'bg-success': material.digita.sim}"><input type="hidden" name="material_video_digital" ></p></td>
+					<td><p>{{material.digital.qte}}<input type="hidden" name="material_video_digital_qte"></p></td>
+					<td><p>{{material.digital.obs}}<input type="hidden" name="material_video_digital_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">DVD</p></td>
+					<td ng-class="{'bg-success': material.dvd.sim}"><input type="hidden" name="material_video_dvd" ></p></td>
+					<td><p>{{material.dvd.qte}}<input type="hidden" name="material_video_dvd_qte"></p></td>
+					<td><p>{{material.dvd.obs}}<input type="hidden" name="material_video_dvd_qte"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Outros</p></td>
+					<td ng-class="{'bg-success': material.video.outros.sim}"><input type="hidden" name="material_video-outros" ></p></td>
+					<td><p>{{material.video.outros.qte}}<input type="hidden" name="material_video_outros_qte"></p></td>
+					<td><p>{{material.video.outros.obs}}<input type="hidden" name="material_video_outros_obs"></p></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="form-group">
+		<h3>Materiais correlatados</h3>
+		<div class="table-responsive" id="show_outros">
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th>Tipo</th>
+				<th></th>
+				<th>Qte. Aproximada (unidades, caixas, etc.)</th>
+				<th>Observações (qualidade, organização, conteúdo, etc)</th>
+				</tr></thead>
+				<tbody>
+				<tr>
+					<td style="vertical-align: middle">Documentos</p></td>
+					<td ng-class="{'bg-success': material.documentos.sim}"><input value="{{material.documentos.sim}}"type="hidden" name="material_correlatados_documentos" ></p></td>
+					<td><p>{{material.documentos.qts}}<input value="{{material.documentos.qts}}" type="hidden" name="material_correlatados_documentos_qte"></p></td>
+					<td><p>{{material.documentos.obs}}<input value="{{material.documentos.obs}}" type="hidden" name="material_correlatados_documentos_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Fotos</p></td>
+					<td ng-class="{'bg-success': material.fotos.sim}"><input type="hidden" name="material_correlatados_fotos" ></p></td>
+					<td><p>{{material.fotos.qte}}<input type="hidden" name="material_correlatados_fotos_qte"></p></td>
+					<td><p>{{material.fotos.obs}}<input type="hidden" name="material_correlatados_fotos_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Cartazes</p></td>
+					<td ng-class="{'bg-success': material.cartazes.sim}"><input type="hidden" name="material_correlatados_cartazes" ></p></td>
+					<td><p>{{material.cartazes.qte}}<input type="hidden" name="material_correlatados_cartazes_qte"></p></td>
+					<td><p>{{material.cartazes.obs}}<input type="hidden" name="material_correlatados_cartazes_obs" ></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Áudios</p></td>
+					<td ng-class="{'bg-success': material.audios.sim}"><input type="hidden" name="material_correlatados_audios" ></p></td>
+					<td><p>{{material.audios.qte}}<input type="hidden" name="material_correlatados_audios_qte"></p></td>
+					<td><p>{{material.audios.obs}}<input type="hidden" name="material_correlatados_audios_obs" ></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Outros</td>
+					<td ng-class="{'bg-success': material.correlatados.outros.sim}"><input type="hidden" name="material_correlatados-outros" ></p></td>
+					<td><p>{{material.correlatados.outros.qte}}<input type="hidden" name="material_correlatados_outros_qte"></p></td>
+					<td><p>{{material.correlatados.outros.obs}}<input type="hidden" name="material_correlatados_outros_obs" ></p></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<h2>Informações sobre o acervo</h2>
+		<hr class="dotted">
+		<div class="table-responsive">
+			<h3>Catalogação</h3>
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2"></th>
+				<th>Qte. Aproximada (porcentagem)</th>
+				<th>Observações</th>
+				</tr></thead>
+				<tbody>
+				<tr>
+					<td style="vertical-align: middle">Está incorporado?<br>
+						(com número de entrada ou número de tombo e com informações básicas de conteúdo e técnicas referentes ao material levantadas)</p></td>
+					<td ng-class="{'bg-success': catalogacao.incorporado.sim}"><input type="hidden" name="acervo_incorporado" ></p></td>
+					<td><p>{{catalogacao.incorporado.qte}}<input type="hidden" name="acervo_incorporado_qte"></p></td>
+					<td><p>{{catalogacao.incorporado.obs}}<input type="hidden" name="acervo_incorporado_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Está catalogado? <br>
+						(conteúdo descrito, sinopse, ficha técnica e/ou indexação)</p></td>
+					<td ng-class="{'bg-success': catalogacao.catalogado.sim}"><input type="hidden" name="acervo_catalogado" ></p></td>
+					<td><p>{{catalogacao.catalogado.qte}}<input type="hidden" name="acervo_catalogado_qte"></p></td>
+					<td><p>{{catalogacao.catalogado.obs}}<input type="hidden" name="acervo_catalogado_obs" ></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Está documentado?<br>
+						(possui certificação de direito)</p></td>
+					<td ng-class="{'bg-success': catalogacao.documentado.sim}"><input type="hidden" name="acervo_documentado" ></p></td>
+					<td><p>{{catalogacao.documentado.qte}}<input type="hidden" name="acervo_documentado_qte"></p></td>
+					<td><p>{{catalogacao.documentado.obs}}<input type="hidden" name="acervo_documentado_obs" ></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Está indexado?<br>
+						(possui sistema de controle de banco de dados)</p></td>
+					<td ng-class="{'bg-success': catalogacao.indexado.sim}"><input type="hidden" name="acervo_indexado" ></p></td>
+					<td><p>{{catalogacao.indexado.qte}}<input type="hidden" name="acervo_indexado_qte"></p></td>
+					<td><p>{{catalogacao.indexado.obs}}<input type="hidden" name="acervo_indexado_obs" ></p></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="table-responsive">
+			<h3>Banco de dados</h3>
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2"></th>
+				<th>Observações</th>
+				</tr></thead>
+				<tbody>
+				<tr>
+					<td style="vertical-align: middle">Possui fichas em papel?</p></td>
+					<td ng-class="{'bg-success': banco.fichas.sim}"><input type="hidden" name="banco_fichas" ></p></td>
+					<td><p>{{banco.fichas.obs}}<input type="hidden" name="banco_fichas_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Possui planilhas em Excel?</p></td>
+					<td ng-class="{'bg-success': banco.planilhas.sim}"><input type="hidden" name="banco_planilhas" ></p></td>
+					<td><p>{{banco.planilhas.obs}}<input type="hidden" name="banco_planilhas_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Possui base de dados?</p></td>
+					<td ng-class="{'bg-success': banco.base.sim}"><input type="hidden" name="banco_base" ></p></td>
+					<td><p>{{banco.base.obs}}<input type="hidden" name="banco_base_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Os dados estão disponíveis na internet?</p></td>
+					<td ng-class="{'bg-success': banco.internet.sim}"><input type="hidden" name="banco_internet" ></p></td>
+					<td><p>{{banco.internet.obs}}</p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Os dados são de acesso público?</p></td>
+					<td ng-class="{'bg-success': banco.publico.sim}"><input type="hidden" name="banco_publico" ></p></td>
+					<td><p>{{banco.publico.obs}}<input type="hidden" name="banco_publico_obs"></p></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr class="dotted">
+		<div class="table-responsive">
+			<h3>Tipo do depósito</h3>
+			<table class="table table-condensed table-striped table-bordered">
+				<thead>
+				<tr><th colspan="2"></th>
+				<th>Observações</th>
+				</tr></thead>
+				<tbody>
+				<tr>
+					<td style="vertical-align: middle">Possui área apropriada para guarda do acervo?</p></td>
+					<td ng-class="{'bg-success': deposito.apropriado.sim}"><input type="hidden" name="deposito_apropriado" ></p></td>
+					<td><p>{{deposito.apropriado.obs}}<input type="hidden" name="deposito_apropriado_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">As áreas estão climatizadas?</p></td>
+					<td ng-class="{'bg-success': deposito.climatizado.sim}"><input type="hidden" name="deposito_climatizado" ></p></td>
+					<td><p>{{deposito.climatizado.obs}}<input type="hidden" name="deposito_climatizado_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Possui condições de arquivamento?</p></td>
+					<td ng-class="{'bg-success': deposito.arquivamento.sim}"><input type="hidden" name="deposito_arquivamento" ></p></td>
+					<td><p>{{deposito.arquivamento.obs}}<input type="hidden" name="deposito_arquivamento_obs"></p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Possui embalagens adequadas?</p></td>
+					<td ng-class="{'bg-success': deposito.embalagens.sim}"><input type="hidden" name="deposito_embalagens" ></p></td>
+					<td><p>{{deposito.embalagens.obs}}</p></td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle">Possui mobiliário adequado?</p></td>
+					<td ng-class="{'bg-success': deposito.mobiliario.sim}"><input type="hidden" name="deposito_mobiliario" ></p></td>
+					<td><p>{{deposito.mobiliario.obs}}<input type="hidden" name="deposito_mobiliario_obs"></p></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+		<div class="col-sm-offset-4 col-sm-6">
+			 <button ng-click="mudapasso(-1)" class="btn btn-warning">Passo anterior</button> <input type="submit" class="btn btn-success" value="Enviar dados"/></button>     
+		</div>
+	</form>
+</div>

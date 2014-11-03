@@ -109,7 +109,7 @@ DgCidadesEstados.prototype = {
   addOption: function (elm, val, text) {
     var opt = document.createElement('option');
     opt.appendChild(document.createTextNode(text));
-    opt.value = val;
+    opt.setAttribute('ng-value',val);
     elm.appendChild(opt);
   },
   estados : [

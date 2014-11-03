@@ -24,7 +24,7 @@ angular.module( 'site-cra.home', [
  */
 .config(function config( $stateProvider ) {
   $stateProvider.state( 'home', {
-    url: '/',
+    url: '/home',
     views: {
       "main": {
         controller: 'homeCtrl',

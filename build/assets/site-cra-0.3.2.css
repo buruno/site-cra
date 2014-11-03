@@ -5873,6 +5873,11 @@ h2 {
   color: #ED1558;
   margin-bottom: 1em;
 }
+h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #ED1558;
+}
 label {
   text-transform: uppercase;
   text-align: right;
@@ -5938,6 +5943,13 @@ table {
 }
 td {
   vertical-align: middle !important;
+}
+td input[type=checkbox] {
+  width: 1.5em;
+  margin: auto;
+}
+#leiamais li {
+  margin-bottom: 1em;
 }
 /**
  * Footer

@@ -31,7 +31,7 @@
 	<link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
 	<!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
 	<script type="text/javascript" src="<%= file %>"></script><% }); %>
-
+ 	<script type="text/javascript" charset="ISO-8859-1" src="assets/js/cidades-estados-1.0.js"></script>
 	<!-- G+ button. proavavelmente não será usado
 	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
 			{ "parsetags": "explicit" }
@@ -45,7 +45,7 @@
 		<a class="navbar-logo" href="home"><img src="assets/img/logo-cra.png"  style="width: 12em" title="CRA"/></a>
 		<div class="navbar-menu">
 			<ul class="list-unstyled nav-menu">
-				<li class=""><a class="btn btn-default btn-block" href="#">Leia mais</a></li>
+				<li class=""><a class="btn btn-default btn-block" href="about">Leia mais</a></li>
 				<li><a class="btn btn-default btn-block" href="cadastro">Cadastre-se</a></li>
 				<li><a class="btn btn-default btn-block" href="questionario">Questionário</a></li>
 			</ul>

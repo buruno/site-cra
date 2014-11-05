@@ -7,22 +7,9 @@
 	<base href="http://localhost/site-cra/build/">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
 
-	<!-- social media tags PRECISA ATUALIZAR
-
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="@joshdmiller">
-	<meta name="twitter:title" content="ngBoilerplate">
-	<meta name="twitter:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
-	<meta name="twitter:creator" content="@joshdmiller">
-	<meta name="twitter:image:src" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846">
-	<meta property="og:title" content="ngBoilerplate" />
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="http://bit.ly/ngBoilerplate" />
-	<meta property="og:image" content="https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846" />
-	<meta property="og:description" content="Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.">
-
-	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- google webfonts -->
@@ -32,25 +19,23 @@
 	<!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
 	<script type="text/javascript" src="<%= file %>"></script><% }); %>
  	<script type="text/javascript" charset="ISO-8859-1" src="assets/js/cidades-estados-1.0.js"></script>
-	<!-- G+ button. proavavelmente não será usado
-	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
-			{ "parsetags": "explicit" }
-	-->
+
 	</script>
 </head>
-<body>
-<div class="container">
-	<div class="col-sm-2" >
-	<div class="navbar main " role="navigation">
+<body id="4">
+<div class="container" id="1" >
+	<div class="col-sm-2" id="2">
+	<div class="navbar main " role="navigation" id="3">
 		<a class="navbar-logo" href="home"><img src="assets/img/logo-cra.png"  style="width: 12em" title="CRA"/></a>
 		<div class="navbar-menu">
 			<ul class="list-unstyled nav-menu">
-				<li class=""><a class="btn btn-default btn-block" href="about">Leia mais</a></li>
+				<li class=""><a class="btn btn-default btn-block" href="leiamais">Leia mais</a></li>
 				<li><a class="btn btn-default btn-block" href="cadastro">Cadastre-se</a></li>
 				<li><a class="btn btn-default btn-block" href="questionario">Questionário</a></li>
+				<li><a class="btn btn-default btn-block" href="fichatecnica">Ficha Técnica</a></li>
 			</ul>
 		</div><!--/.navbar-collapse -->
-		<img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 7em" />  
+		<a href="http://cinemateca.org.br" target="_blank"><img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 7em" /></a>
 	</div>
 </div>
 <section ui-view="main" id="main" class="container main col-sm-8 col-sm-offset-4">

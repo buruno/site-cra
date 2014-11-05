@@ -2,7 +2,8 @@ angular.module( 'site-cra', [
   'templates-app',
   'templates-common',
   'site-cra.home',
-  'site-cra.about',
+  'site-cra.leiamais',
+  'site-cra.fichatecnica',
   'site-cra.cadastro',
   'site-cra.questionario',
   'ui.router'

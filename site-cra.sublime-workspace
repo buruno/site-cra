@@ -4,8 +4,8 @@
 		"selected_items":
 		[
 			[
-				"from",
-				"fromState"
+				"get",
+				"getElementById"
 			],
 			[
 				"back",
@@ -72,83 +72,117 @@
 	"buffers":
 	[
 		{
-			"file": "src/app/questionario/questionario.tpl.html",
+			"file": "src/index.php",
 			"settings":
 			{
-				"buffer_size": 29267,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/questionario/questionario.js",
-			"settings":
-			{
-				"buffer_size": 1305,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/app.js",
-			"settings":
-			{
-				"buffer_size": 698,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/home/home.tpl.html",
-			"settings":
-			{
-				"buffer_size": 2449,
-				"line_ending": "Windows"
+				"buffer_size": 2056,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "src/less/main.less",
 			"settings":
 			{
-				"buffer_size": 3070,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "site-cra.sublime-project",
-			"settings":
-			{
-				"buffer_size": 286,
+				"buffer_size": 3336,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/index.php",
+			"file": "src/app/questionario/questionario.tpl.html",
 			"settings":
 			{
-				"buffer_size": 3020,
-				"line_ending": "Windows"
+				"buffer_size": 57597,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "<!DOCTYPE html>\n<html ng-app=\"site-cra\" ng-controller=\"AppCtrl\">\n<head>\n	<meta charset=\"utf-8\">\n	<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">\n	<title>CRA &ndash; Centro de Referência Audiovisual</title>\n	<base href=\"http://localhost/site-cra/build/\">\n	<meta name=\"description\" content=\"\">\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n	<!-- social media tags PRECISA ATUALIZAR\n\n	<meta name=\"twitter:card\" content=\"summary\">\n	<meta name=\"twitter:site\" content=\"@joshdmiller\">\n	<meta name=\"twitter:title\" content=\"ngBoilerplate\">\n	<meta name=\"twitter:description\" content=\"Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.\">\n	<meta name=\"twitter:creator\" content=\"@joshdmiller\">\n	<meta name=\"twitter:image:src\" content=\"https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846\">\n	<meta property=\"og:title\" content=\"ngBoilerplate\" />\n	<meta property=\"og:type\" content=\"website\" />\n	<meta property=\"og:url\" content=\"http://bit.ly/ngBoilerplate\" />\n	<meta property=\"og:image\" content=\"https://a248.e.akamai.net/assets.github.com/images/modules/logos_page/Octocat.png?1366128846\" />\n	<meta property=\"og:description\" content=\"Non-Trivial AngularJS Made Easy: Everything you need to kickstart AngularJS projects: a best-practice directory structure, an intelligent build system, and the best web design libraries around.\">\n\n	-->\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n	<!-- google webfonts -->\n	<link href='http://fonts.googleapis.com/css?family=Lato:400,300,400italic,700,700italic,900' rel='stylesheet' type='text/css'>\n	<!-- compiled CSS -->\n	<link rel=\"stylesheet\" type=\"text/css\" href=\"assets/site-cra-0.3.2.css\" />\n	<!-- compiled JavaScript -->\n	<script type=\"text/javascript\" src=\"vendor/angular/angular.js\"></script>\n	<script type=\"text/javascript\" src=\"vendor/angular-bootstrap/ui-bootstrap-tpls.min.js\"></script>\n	<script type=\"text/javascript\" src=\"vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js\"></script>\n	<script type=\"text/javascript\" src=\"vendor/angular-ui-router/release/angular-ui-router.js\"></script>\n	<script type=\"text/javascript\" src=\"src/app/about/about.js\"></script>\n	<script type=\"text/javascript\" src=\"src/app/app.js\"></script>\n	<script type=\"text/javascript\" src=\"src/app/cadastro/cadastro.js\"></script>\n	<script type=\"text/javascript\" src=\"src/app/home/home.js\"></script>\n	<script type=\"text/javascript\" src=\"src/app/questionario/questionario.js\"></script>\n	<script type=\"text/javascript\" src=\"src/common/plusOne/plusOne.js\"></script>\n	<script type=\"text/javascript\" src=\"templates-common.js\"></script>\n	<script type=\"text/javascript\" src=\"templates-app.js\"></script>\n\n	<!-- G+ button. proavavelmente não será usado\n	<script type=\"text/javascript\" src=\"https://apis.google.com/js/plusone.js\">\n			{ \"parsetags\": \"explicit\" }\n	-->\n	</script>\n</head>\n<body>\n<div class=\"container\">\n	<div class=\"col-sm-2\" >\n	<div class=\"navbar main \" role=\"navigation\">\n		<a class=\"navbar-logo\" href=\"home\"><img src=\"assets/img/logo-cra.png\"  style=\"width: 12em\" title=\"CRA\"/></a>\n		<div class=\"navbar-menu\">\n			<ul class=\"list-unstyled nav-menu\">\n				<li class=\"\"><a class=\"btn btn-default btn-block\" href=\"#\">Leia mais</a></li>\n				<li><a class=\"btn btn-default btn-block\" href=\"cadastro\">Cadastre-se</a></li>\n				<li><a class=\"btn btn-default btn-block\" href=\"questionario\">Questionário</a></li>\n			</ul>\n		</div><!--/.navbar-collapse -->\n		<img src=\"assets/img/logo_cine.png\" class=\"img-responsive pull-right\" style=\"width: 7em\" />  \n	</div>\n</div>\n<section ui-view=\"main\" id=\"main\" class=\"container main col-sm-8 col-sm-offset-4\">\n</section>\n</body>\n</html>\n",
-			"file": "build/index.php",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "tabelas.txt",
 			"settings":
 			{
-				"buffer_size": 3834,
-				"line_ending": "Windows"
+				"buffer_size": 6255,
+				"line_ending": "Unix",
+				"name": "ALTER TABLE cra_acervo"
+			}
+		},
+		{
+			"file": "src/app/questionario/questionario.js",
+			"settings":
+			{
+				"buffer_size": 2219,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/app.js",
+			"settings":
+			{
+				"buffer_size": 728,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/assets/js/cidades-estados-1.0.js",
+			"settings":
+			{
+				"buffer_size": 85812,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/cadastro/cadastro.tpl.html",
+			"settings":
+			{
+				"buffer_size": 1519,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/fichatecnica/fichatecnica.tpl.html",
+			"settings":
+			{
+				"buffer_size": 827,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build/index.php",
+			"settings":
+			{
+				"buffer_size": 2961,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/cinemateca/devel/programadorabrasil/build/index.html",
+			"settings":
+			{
+				"buffer_size": 4312,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build/src/app/questionario/questionario.js",
+			"settings":
+			{
+				"buffer_size": 2622,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build/.htaccess",
+			"settings":
+			{
+				"buffer_size": 210,
+				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 380.0,
 		"selected_items":
 		[
-			[
-				"Package Control: ",
-				"Package Control: Upgrade/Overwrite All Packages"
-			],
 			[
 				"pack",
 				"Package Control: Install Package"
@@ -170,11 +204,7 @@
 	},
 	"console":
 	{
-		"height": 126.0,
-		"history":
-		[
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
-		]
+		"height": 126.0
 	},
 	"distraction_free":
 	{
@@ -185,25 +215,16 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/D/mowes/www/site-cra",
-		"/D/mowes/www/site-cra/build",
-		"/D/mowes/www/site-cra/src",
-		"/D/mowes/www/site-cra/src/app",
-		"/D/mowes/www/site-cra/src/app/home",
-		"/D/mowes/www/site-cra/src/app/questionario",
-		"/D/mowes/www/site-cra/src/less"
-	],
 	"file_history":
 	[
-		"/C/Users/buruno/Desktop/teste_cra/assets/site-cra-0.3.2.js",
-		"/C/Users/buruno/Desktop/teste_cra/index.php",
-		"/D/mowes/www/site-cra/Gruntfile.js",
-		"/C/Users/buruno/Desktop/Sublime Text Build 3059 x64(1)/Data/Packages/Less2Css/README.md",
-		"/C/Users/buruno/Desktop/Sublime Text Build 3059 x64(1)/Data/Packages/User/LESS.sublime-settings",
-		"/C/Users/buruno/Desktop/Sublime Text Build 3059 x64(1)/Data/Packages/LESS/LESS.sublime-settings",
-		"/C/Users/buruno/Desktop/Sublime Text Build 3059 x64(1)/Data/Packages/User/less2css.sublime-settings",
+		"/Users/cinemateca/devel/programadorabrasil/build/.htaccess",
+		"/Users/cinemateca/devel/temp/assets/site-cra-0.3.2.js",
+		"/Users/cinemateca/devel/site-cra/src/app/home/home.tpl.html",
+		"/Users/cinemateca/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/cinemateca/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/cinemateca/devel/site-cra/build/.htaccess",
+		"/Users/cinemateca/.ssh/id_rsa.pub",
+		"/Users/cinemateca/devel/site-cra/site-cra.sublime-project",
 		"/D/mowes/www/mod-site/source/mod-site.sublime-project",
 		"/C/Users/buruno/Desktop/_frontend/css/main.css",
 		"/C/Users/buruno/Desktop/_frontend/index.html",
@@ -268,11 +289,11 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 		]
@@ -282,26 +303,82 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"material.pelicula-outros-",
-			"material.copia-",
-			"ng-model=\\\"\"",
-			"| ng-model=\\\"^[a-z]*\\\"",
-			"material.contratipo-pb",
-			"material.contratipo-cor-",
-			"material.bitola-",
-			"dados.resp-",
-			"dados.acervo-",
-			"{}",
-			"ng-model=\"deposito_",
-			"ng-model=\"banco_",
-			"ng-model=\"acervo_",
-			"ng-model=\"material-",
-			"ng-model=\"material_",
-			"ng-model=\"dados_",
-			"material_outros",
-			" ng-pristine ng-valid",
-			" ng-valid ng-dirty ng-valid-parse",
-			"class=\"ng-valid ng-dirty ng-valid-parse ng-touched\" ",
+			"html5",
+			"form",
+			"dados",
+			"{{",
+			"ng-model=\"",
+			"material_",
+			"mm_",
+			"mm\"",
+			"mm",
+			"pelicula_bitola_",
+			"_pelicula_pelicula_",
+			"material_",
+			"resp_",
+			"dados_acervo-",
+			"-",
+			"-cor",
+			"-pb",
+			"-outros-",
+			"material-",
+			"-qte",
+			"-obs",
+			"bitola-",
+			"(name=\\\").*(\\\")",
+			"bg-success",
+			"ng-class=\"{material",
+			"</p></p>",
+			"</p><input",
+			".sim}}<input",
+			"material.copia",
+			".true",
+			"nd-",
+			"type=\"text\"></td>",
+			"type=\"checkbox\"></td>",
+			"class=\"form-control\"",
+			" type=\"text\"",
+			"conexas",
+			"\" name=",
+			"p ng-model=\"",
+			"nd-",
+			"bitola.outros",
+			"\" name=",
+			"<p ng-model=\"",
+			"(ng-show=\\\").*[a-z](\\\" )",
+			"		<div class=\"col-sm-offset-4 col-sm-6\">\n			 <button ng-click=\"mudapasso(-1)\" class=\"btn btn-warning\">Passo anterior</button> <button ng-click=\"mudapasso(1)\" class=\"btn btn-primary\">Próximo passo</button>      \n		</div>",
+			"textarea",
+			"type=\"checkbox\"",
+			"</td>",
+			"class=\"form-control\" ",
+			"input",
+			" (ng-class=\\\"\\{).*(\\\")",
+			" (ng-class=\\\"\\{).*(\\})",
+			".acervo",
+			"resp.",
+			"acervo.",
+			"obs VARCHAR(90)",
+			"ng-if",
+			"bitola.",
+			"mm.",
+			".true",
+			".true}",
+			"mm\\.",
+			"mm.",
+			"(\\.).*mm(\\.)",
+			"(mudapasso\\().*(\\))",
+			"\\{",
+			"(ng-class=\\\"\\{success:).*(\\}\\\")",
+			"{success",
+			"(",
+			"(1)",
+			"-1",
+			"(\\()[a-z]*(\\))",
+			"root",
+			" ng-class=\"{success: CHK}\"",
+			"value=\"1\"",
+			"  ",
+			"    ",
 			"figcap",
 			"overview",
 			"scroll",
@@ -330,22 +407,71 @@
 		"regex": false,
 		"replace_history":
 		[
-			"material.pelicula.outros.",
-			"material.pelicula.outros-.",
-			"material.copia.",
-			"material.contratipo.pb",
-			"material.contratipo.cor.",
-			"material.bitola.",
-			"dados.resp.",
-			"dados.acervo.",
-			"[]",
-			"ng-model=\"deposito.",
-			"ng-model=\"banco.",
+			"{{acervo.",
 			"ng-model=\"acervo.",
-			"ng-model=\"material.",
-			"ng-model=\"dados.",
-			"material-pelicula-outros",
+			"material_pelicula_",
+			"material_correlatados_",
+			"material_video_",
+			"_",
+			"\"",
 			"",
+			"pelicula_",
+			"_pelicula_",
+			"material_pelicula_",
+			"material_pelicula",
+			"",
+			"dados_",
+			"_cor",
+			"_pb",
+			"_outros_",
+			"material_",
+			"_qte",
+			"_obs",
+			"bitola_",
+			"'bg-success'",
+			"ng-class=\"{bg-success: material",
+			"</p>",
+			"<input",
+			"",
+			".sim}\"></p><input",
+			".sim",
+			"ng-",
+			"type=\"text\" /></td>",
+			"ng-value=\"sim\" type=\"checkbox\" /></td>",
+			"",
+			"correlatas",
+			"}}<input type=\"hidden\" name=",
+			"p>{{",
+			"ng-",
+			"}}<input type=\"hidden\" name=",
+			"<p>{{",
+			"",
+			"p",
+			"",
+			"</p></td>",
+			"",
+			"p",
+			"",
+			".catalogacao",
+			"responsavel.",
+			"catalogacao.",
+			"obs TINYTEXT",
+			"ng-show",
+			"bitola.mm",
+			".",
+			".check",
+			".check}",
+			"mm\\'.",
+			"\\.\\'$\\'mm\\.",
+			".'$'mm.",
+			"",
+			"{'success'",
+			"('1')",
+			"'-1'",
+			"",
+			"ng-value=\"1\"",
+			"\\t",
+			"/t",
 			"glyphicon glyphicon-",
 			"",
 			"\"btn btn-default btn-lg\"",
@@ -361,149 +487,55 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/app/questionario/questionario.tpl.html",
-					"semi_transient": false,
+					"file": "src/index.php",
 					"settings":
 					{
-						"buffer_size": 29267,
+						"buffer_size": 2056,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3683,
-								3683
+								459,
+								459
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 816.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/app/questionario/questionario.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1305,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								388,
-								390
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 42.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/app/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 698,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								456,
-								456
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/app/home/home.tpl.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23,
-								23
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "src/less/main.less",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3070,
+						"buffer_size": 3336,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2109,
-								2109
+								0,
+								0
 							]
 						],
 						"settings":
@@ -513,82 +545,216 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1344.0,
+						"translation.y": 2234.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "site-cra.sublime-project",
-					"semi_transient": false,
+					"buffer": 2,
+					"file": "src/app/questionario/questionario.tpl.html",
 					"settings":
 					{
-						"buffer_size": 286,
+						"buffer_size": 57597,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								275,
-								275
+								513,
+								513
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "src/index.php",
-					"semi_transient": false,
+					"buffer": 3,
+					"file": "tabelas.txt",
 					"settings":
 					{
-						"buffer_size": 3020,
+						"buffer_size": 6255,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1640,
-								1640
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"auto_name": "ALTER TABLE cra_acervo",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/app/questionario/questionario.js",
+					"settings":
+					{
+						"buffer_size": 2219,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 168.0,
+						"translation.y": 319.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/app/app.js",
+					"settings":
+					{
+						"buffer_size": 728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/assets/js/cidades-estados-1.0.js",
+					"settings":
+					{
+						"buffer_size": 85812,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3756,
+								3756
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/app/cadastro/cadastro.tpl.html",
+					"settings":
+					{
+						"buffer_size": 1519,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								298,
+								298
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/app/fichatecnica/fichatecnica.tpl.html",
+					"settings":
+					{
+						"buffer_size": 827,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								728,
+								728
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "build/index.php",
-					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3834,
+						"buffer_size": 2961,
 						"regions":
 						{
 						},
@@ -608,7 +774,87 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/cinemateca/devel/programadorabrasil/build/index.html",
+					"settings":
+					{
+						"buffer_size": 4312,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "build/src/app/questionario/questionario.js",
+					"settings":
+					{
+						"buffer_size": 2622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2434,
+								2436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 42.0,
+						"translation.y": 412.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "build/.htaccess",
+					"settings":
+					{
+						"buffer_size": 210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"type": "text"
 				}
 			]
@@ -642,7 +888,7 @@
 		"cols":
 		[
 			0.0,
-			0.9547920434,
+			0.969879518072,
 			1.0
 		],
 		"rows":
@@ -656,10 +902,9 @@
 	{
 		"height": 0.0
 	},
-	"project": "site-cra.sublime-project",
 	"replace":
 	{
-		"height": 62.0
+		"height": 73.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -678,25 +923,10 @@
 		],
 		"width": 0.0
 	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"selected_group": 0,
-	"settings":
-	{
-	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 227.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"side_bar_width": 260.0,
+	"status_bar_visible": true
 }

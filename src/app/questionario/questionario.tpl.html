@@ -4,7 +4,7 @@
 	Aqui é onde você pode cadastrar seu acervo a ser acrescentado em nosso banco de dados. Se preferir, <a target="_blank" href="assets/download/questionario.pdf">imprima o arquivo em pdf</a>, preencha-o e envie para:
 </p>
 <p><em>PROJETOCRA - Largo Senador Raul Cardoso, 207, Vila Clementino; São Paulo - SP; CEP 04021-070</em></p>
-<p>Informações ou dúvidas: Giba (<a href="mailto:cra.giba@gmail.com">cra.giba@gmail.com</a>) ou Lídia (<a href="mailto:cra.lidia@gmail.com">cra.lidia@gmail.com</a>)<br />
+<p>Informações ou dúvidas: Giba (<a href="mailto:cra.giba@gmail.com">cra.giba@gmail.com</a>) ou Lidia (<a href="mailto:cra.lidiag@gmail.com">cra.lidiag@gmail.com</a>)<br />
 ​Telefone: (11) 3512 6111​, ramais 236 e 239, respectivamente</p><br />
 <ol id="passos" class="list-unstyled clearfix ng-scope">
 	<li ng-class="{passo_atual: passo==1}"><span>1&ordm;</span><br />passo</li>
@@ -457,7 +457,7 @@
 	</form>
 </div>
 <div class="ng-scope" ng-show="passo == 4">
-	<form name="formFinal" action="enviar.php" method="POST">
+	<form name="formFinal" action="enviar.php" method="POST" enctype="application/x-www-form-urlencoded" accept-charset="ISO-8859-1">
 	<h2>Resumo do formulário</h2>
 	<hr />
 	<p>Confira as informações preenchidas e retorne aos passos anteriores para alterá-las</p>
@@ -835,7 +835,7 @@
     <textarea ng-model="acervo.informacoes.adicionais" name="informacoes_adicionais" class="form-control"></textarea>
     <hr class="dotted" />
 	<div class="col-sm-offset-4 col-sm-6">
-		 <button ng-click="mudapasso(-1)" class="btn btn-warning">Passo anterior</button> <input ng-click="bypass()" type="submit" class="btn btn-success" value="Enviar dados"/></button>     
+		<a ng-click="mudapasso(-1)" ng-href="#3" class="btn btn-warning">Passo anterior</a> <input ng-click="bypass()" type="submit" class="btn btn-success" value="Enviar dados"/></button>     
 	</div>
 	</form>
 </div>

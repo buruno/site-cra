@@ -35,7 +35,7 @@
 				<li><a class="btn btn-default btn-block" href="fichatecnica">Ficha Técnica</a></li>
 			</ul>
 		</div><!--/.navbar-collapse -->
-		<a href="http://cinemateca.org.br" target="_blank"><img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 7em" /></a>
+		<a href="http://cinemateca.org.br" target="_blank"><img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 8em" /></a>
 	</div>
 </div>
 <section ui-view="main" id="main" class="container main col-sm-8 col-sm-offset-4">

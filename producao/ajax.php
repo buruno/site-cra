@@ -42,7 +42,7 @@ function sql_insert ($data, $typeDef, $table) {
 
         for($i = 0; $i < count($typeDef); $i++) {
             /* Set params for query */
-            $params[$keys[$i]] = $vals[$i];
+            $params[$keys[$i]] = utf8_decode($vals[$i]);
         }
         
         /* Execute the prepared Statement */
@@ -62,28 +62,34 @@ function sql_insert ($data, $typeDef, $table) {
 $json  = json_decode(file_get_contents("php://input"));
 $datas = array();
 foreach($json as $key =>$value) {
-    $datas[$key] = $value;
-}
+    $datas[$key] = rawurldecode($value);
+};
+$datas = array_filter($datas);
+array_walk(
+    $datas,
+    function (&$entry) {
+        $entry = rawurldecode($entry);
+    }
+);
 $n = count($datas);
 $s = array();
-//print_r($datas);
 for($z = 0; $z < $n; $z++) {
     array_push($s,'s');
 }
 if(sql_insert($datas, $s, "cra_cadastro")) {
-    $to = "nddled@gmail.com";
-    $subject = "[CRA] Novo cadastro: $_POST[dados_id], $_POST[dados_nome]";
-    $txt = "$datas";
-    $headers = "From: $_POST[dados_email]" . "\r\n";
+    $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
+    $subject = "[NOVO CADASTRO] $datas[nome], $datas[email]";
+    $txt = "nome: $datas[nome]\nemail: $datas[email]";
+    $headers = "From: $datas[email]" . "\r\n";
     if(mail($to,$subject,$txt,$headers)){
         return true;
     };
 }
 else {
-    $to = "nddled@gmail.com";
-    $subject = "[CRA] ERRO: $_POST[dados_id], $_POST[dados_nome]";
-    $txt = "$datas";
-    $headers = "From: $_POST[dados_email]" . "\r\n";
+    $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
+    $subject = "[ERRO] $datas[nome], $datas[email]";
+    $txt = "nome: $datas[nome]\nemail: $datas[email]";
+    $headers = "From: $datas[email]" . "\r\n";
     mail($to,$subject,$txt,$headers);
     return false;
 }

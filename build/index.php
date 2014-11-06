@@ -21,6 +21,8 @@
 	<script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="vendor/placeholders/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
 	<script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" src="vendor/angular-ui-utils/modules/route/route.js"></script>
+	<script type="text/javascript" src="src/app/about/about.js"></script>
 	<script type="text/javascript" src="src/app/app.js"></script>
 	<script type="text/javascript" src="src/app/cadastro/cadastro.js"></script>
 	<script type="text/javascript" src="src/app/fichatecnica/fichatecnica.js"></script>
@@ -47,7 +49,7 @@
 				<li><a class="btn btn-default btn-block" href="fichatecnica">Ficha Técnica</a></li>
 			</ul>
 		</div><!--/.navbar-collapse -->
-		<a href="http://cinemateca.org.br" target="_blank"><img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 7em" /></a>
+		<a href="http://cinemateca.org.br" target="_blank"><img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 8em" /></a>
 	</div>
 </div>
 <section ui-view="main" id="main" class="container main col-sm-8 col-sm-offset-4">

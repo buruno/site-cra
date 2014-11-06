@@ -46,7 +46,7 @@ function sql_insert ($data, $typeDef, $table) {
 
         for($i = 0; $i < count($typeDef); $i++) {
             /* Set params for query */
-            $params[$keys[$i]] = $vals[$i];
+            $params[$keys[$i]] = utf8_decode($vals[$i]);
         }
         
         /* Execute the prepared Statement */
@@ -65,15 +65,22 @@ function sql_insert ($data, $typeDef, $table) {
 
 
 $datas = array_filter($_POST);
+array_walk(
+    $datas,
+    function (&$entry) {
+        $entry = rawurldecode($entry);
+    }
+);
 $n = count($datas);
 $s = array();
 for($z = 0; $z < $n; $z++) {
     array_push($s,'s');
 }
 if(sql_insert($datas, $s, "cra_acervo")) {
-    $to = "nddled@gmail.com";
+    $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
     $subject = "[NOVA INSCRIÇÃO] $_POST[dados_id], $_POST[dados_nome]";
-    $txt = http_build_query($datas,'',"<br />");
+    $txt = http_build_query($datas,'',"\n");
+    $txt = urldecode($txt);
     $headers = "From: $_POST[dados_email]";
     if(mail($to,$subject,$txt,$headers)){
         ?>
@@ -88,6 +95,7 @@ if(sql_insert($datas, $s, "cra_acervo")) {
         ?>
         <script>
         alert("Questionário preenchido com sucesso! Obrigado por sua inestimável contribuição.");
+        console.log($txt);
         window.location = "http://programadorabrasil.gov.br/cra";
         </script>
 
@@ -96,7 +104,7 @@ if(sql_insert($datas, $s, "cra_acervo")) {
 
 }
 else {
-    $to = "nddled@gmail.com";
+    $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
     $subject = "[ERRO]: $_POST[dados_id], $_POST[dados_nome]";
     $txt = "$datas";
     $headers = "From: $_POST[dados_email]" . "\r\n";

@@ -1,4 +1,73 @@
-angular.module('templates-app', ['cadastro/cadastro.tpl.html', 'fichatecnica/fichatecnica.tpl.html', 'home/home.tpl.html', 'leiamais/leiamais.tpl.html', 'questionario/questionario.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'cadastro/cadastro.tpl.html', 'fichatecnica/fichatecnica.tpl.html', 'home/home.tpl.html', 'leiamais/leiamais.tpl.html', 'questionario/questionario.tpl.html']);
+
+angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("about/about.tpl.html",
+    "<div id=\"leiamais\">\n" +
+    "<h1>Objetivos Gerais</h1>\n" +
+    "<hr class=\"dotted\" />\n" +
+    "<ul>\n" +
+    "<li>Planejar e estruturar o projeto do <em>CRA-Centro de Referência Audiovisual</em>, como o grande repositório brasileiro de conteúdos audiovisuais e informações conexas, hoje disponíveis, mas dispersos nos diversos órgãos de cultura da administração federal (Cinemateca Brasileira, Biblioteca Nacional, FUNARTE, etc.), bem como em instituições públicas dos estados e municípios do país. </li>\n" +
+    "\n" +
+    "<li>Mapear, catalogar e monitorar os conteúdos audiovisuais disponíveis nacionalmente, concentrando o que for possível na estrutura única de armazenamento e busca do CRA, e criando soluções técnicas para o acesso fácil a acervos, midiatecas e bancos de dados remotos.</li>\n" +
+    "\n" +
+    "<li>Desenvolver conceitos e soluções para um modelo integrado e sustentável de preservação e acesso aos acervos culturais, materializando uma política nacional de digitalização de acervos.</li>\n" +
+    "</ul>\n" +
+    "<hr />\n" +
+    "<h1>Objetivos Específicos</h1>\n" +
+    "<hr class=\"dotted\" />\n" +
+    "<ul>\n" +
+    "<li>Oferecer uma infraestrutura técnica e operacional para o Programa Nacional de Apoio à Cultura (Pronac), em apoio à sua missão de estimular a produção, a distribuição e o acesso aos produtos culturais; proteger e conservar o patrimônio histórico e artístico; promover a difusão da cultura brasileira e a diversidade regional</li>\n" +
+    "\n" +
+    "<li>Materializar os objetivos do <em>Sistema Nacional de Informações e Indicadores Culturais (SNIIC)</em>, centralizando informações sobre bens culturais e facilitando o acesso de agentes culturais e da sociedade como um todo.</li>\n" +
+    "\n" +
+    "<li>Apoiar o SNIIC no monitoramento do <em>Plano Nacional de Cultura</em> (PNC), dando a ele uma infraestrutura técnica para coleta, sistematização e interpretação de dados; serviços de busca de dados georreferenciados, estatísticas, indicadores e outras informações relevantes de bens e serviços culturais.</li>\n" +
+    "\n" +
+    "<li>Fortalecer o Programa Nacional de Cultura, Educação e Cidadania - Cultura Viva, assegurando acesso fácil a conteúdos para os Pontos de Cultura.</li>\n" +
+    "\n" +
+    "<li>Apoiar as iniciativas do <em>Programa Mais Cultura</em>, fortalecendo a perspectiva da cultura como vetor importante para o desenvolvimento do país, incluído na agenda social, para atuar na redução da pobreza e a desigualdade social.</li>\n" +
+    "\n" +
+    "<li>Apoiar os Núcleos de <em>Produção Digital (NPDs)</em>, no âmbito do Programa Olhar Brasil, fornecendo conteúdos audiovisuais livres de direitos para uso dos produtores audiovisuais independentes.</li>\n" +
+    "\n" +
+    "<li>Contribuir para a Meta 31 do <em>Plano Nacional de Cultura</em> (Dotar municípios brasileiros de algum tipo de instituição ou equipamento cultural, entre museu, teatro ou sala de espetáculo, arquivo público ou centro de documentação, cinema e centro cultural, conforme percentuais por tamanho de município)</li>\n" +
+    "\n" +
+    "<li>Contribuir para a Meta 40 do <em>Plano Nacional de Cultura</em> (Disponibilização na internet de conteúdos de acervo do Centro Técnico do Audiovisual - CTAv e da Cinemateca Brasileira; da Fundação Casa de Rui Barbosa; do Patrimônio Histórico e Artístico Nacional - Iphan; da Fundação Biblioteca Nacional – FBN; e do Centro de Documentação da Fundação Nacional das Artes - Cedoc/Funarte) </li>\n" +
+    "\n" +
+    "<li>Contribuir para a Meta 40 do <em>Plano Nacional de Cultura</em> (“100% de bibliotecas públicas e 70% de museus e arquivos disponibilizando informações sobre seu acervo no SNIIC”)</li>\n" +
+    "\n" +
+    "<li>Facilitar o acesso ao catálogo da <em>Programadora Brasil</em> e contribuir para a maior difusão de produtos audiovisuais brasileiros, na rede de exibição do Cine Mais Cultura.</li>\n" +
+    "\n" +
+    "<li>Abastecer de materiais audiovisuais e contribuir para fomentar a Rede de Laboratórios de Arte e Inovação, em implantação no <em>Programa de Cultura Digital</em> do MinC.</li>\n" +
+    "\n" +
+    "<li>Oferecer a infraestrutura técnica e a programação para a Rede de Cinemas Universitários Conectados, do <em>Programa de Cultura Digital</em> do MinC.</li>\n" +
+    "\n" +
+    "<li>Contribuir para o desenvolvimento da <em>Política Nacional de Integração entre Educação e Cultura</em>, apoiando suas ações prioritárias:</li>\n" +
+    "\n" +
+    "<li>Mais Cultura nas Escolas Agentes de Leitura Mais Educação Cine Educação Pesquisa, mapeamento e georreferenciamento Programa Nacional Biblioteca da Escola – PNBE/ARTES Formação continuada para professores de artes</li>\n" +
+    "\n" +
+    "<li>Contribuir para as ações de Comunicação para a Cultura, em particular as seguintes iniciativas:</li>\n" +
+    "\n" +
+    "<li>Promoção de infraestrutura de comunicação, como conexão banda larga e equipamentos tecnológicos, em especial, no contexto da radiodifusão e internet; Disponibilização do conteúdo em plataforma online, que reunirá num ponto da Internet a multiplicidade de produções realizadas, garantindo espaços de circulação, ampliando o acesso dos agentes da cultura aos meios de comunicação, diversificando a programação dos veículos, e ainda, potencializando o uso dos canais alternativos para estimular as redes públicas.</li>\n" +
+    "\n" +
+    "<li>Estratégia Executiva / Metodologia  A estruturação do <em>CRA-Centro de Referência Audiovisual</em> envolverá as seguintes atividades: Estudos para a implantação de uma estrutura técnica de armazenagem de conteúdos digitais e de tráfego de dados em rede, com alta velocidade e alcance nacional, em parceria com a RNP-Rede Nacional de Ensino e Pesquisa, do Ministério da Ciência, Tecnologia e Inovação.</li>\n" +
+    "\n" +
+    "<li>Mapeamento dos acervos audiovisuais públicos, integralmente no caso dos acervos vinculados à União e os principais sob responsabilidade dos Estados e Municípios, bem como dos mais significativos acervos privados.</li>\n" +
+    "\n" +
+    "<li>Gestão junto aos órgãos estatais, públicos e privados detentores de acervos, com vistas à formalização de convênios para a armazenagem, indexação e disponibilização online desses acervos.</li>\n" +
+    "\n" +
+    "<li>Disponibilização do acervo da <em>Programadora Brasil</em> na estrutura técnica do CRA.</li>\n" +
+    "\n" +
+    "<li>Articulações junto a detentores de acervos que eventualmente não queiram armazená-los no CRA, de forma a estabelecer padrões de interoperabilidade de seus sistemas técnicos com o do centro.</li>\n" +
+    "\n" +
+    "<li>Padronização dos catálogos de obras audiovisuais disponíveis nos diversos acervos brasileiros e disponibilização online desses catálogos na estrutura técnica do CRA, de modo a facilitar a consulta e a localização de obras.</li>\n" +
+    "\n" +
+    "<li>Estudo do modelo jurídico-institucional adequado para a implantação do CRA e a regulação de seu relacionamento com os demais órgãos públicos de arquivamento e gestão de dados, assim como instituições privadas.</li>\n" +
+    "\n" +
+    "<li>Consolidação de um projeto operacional de implantação progressiva do CRA, com definição de sua estrutura física, técnica e humana, e orçamento geral dos investimentos necessários à sua materialização.</li>\n" +
+    "\n" +
+    "<li>Instrução de uma Portaria Interministerial, a ser promulgada pelos senhores ministros da Cultura e da Ciência, Tecnologia e Inovação, instituindo e regulamentando o <em>Centro de Referência de Audiovisual</em>. </li>\n" +
+    "</ul>\n" +
+    "</div>");
+}]);
 
 angular.module("cadastro/cadastro.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("cadastro/cadastro.tpl.html",
@@ -7,7 +76,7 @@ angular.module("cadastro/cadastro.tpl.html", []).run(["$templateCache", function
     "    <p>\n" +
     "      Cadastre-se para receber notificações e novidades acerca do desenvolvimento do portal.\n" +
     "    </p>\n" +
-    "    <p>Informações ou dúvidas: Giba (<a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a>) ou Lídia (<a href=\"mailto:cra.lidia@gmail.com\">cra.lidia@gmail.com</a>)<br />\n" +
+    "    <p>Informações ou dúvidas: Giba (<a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a>) ou Lidia (<a href=\"mailto:cra.lidiag@gmail.com\">cra.lidiag@gmail.com</a>)<br />\n" +
     "​Telefone: (11) 3512 6111​, ramais 236 e 239, respectivamente</p>\n" +
     "    <hr class=\"dotted\" />\n" +
     "    <form role=\"form\" ng-submit=\"cadastrar()\" id=\"form_dados\" name=\"formCadastro\" class=\"form-horizontal\" novalidate>\n" +
@@ -44,7 +113,7 @@ angular.module("fichatecnica/fichatecnica.tpl.html", []).run(["$templateCache", 
     "<hr class=\"dotted\" />\n" +
     "<h3>contatos para dúvidas:</h3>\n" +
     "<p>\n" +
-    "<a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a> | <a href=\"mailto:cra.lidia@gmail.com\">cra.lidia@gmail.com</a>\n" +
+    "<a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a> | <a href=\"mailto:cra.lidiag@gmail.com\">cra.lidiag@gmail.com</a>\n" +
     "​</p>\n" +
     "<p>\n" +
     "Telefones: (11) 3512 6​111 - ​ramais ​236 e 239\n" +
@@ -155,7 +224,7 @@ angular.module("questionario/questionario.tpl.html", []).run(["$templateCache", 
     "	Aqui é onde você pode cadastrar seu acervo a ser acrescentado em nosso banco de dados. Se preferir, <a target=\"_blank\" href=\"assets/download/questionario.pdf\">imprima o arquivo em pdf</a>, preencha-o e envie para:\n" +
     "</p>\n" +
     "<p><em>PROJETOCRA - Largo Senador Raul Cardoso, 207, Vila Clementino; São Paulo - SP; CEP 04021-070</em></p>\n" +
-    "<p>Informações ou dúvidas: Giba (<a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a>) ou Lídia (<a href=\"mailto:cra.lidia@gmail.com\">cra.lidia@gmail.com</a>)<br />\n" +
+    "<p>Informações ou dúvidas: Giba (<a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a>) ou Lidia (<a href=\"mailto:cra.lidiag@gmail.com\">cra.lidiag@gmail.com</a>)<br />\n" +
     "​Telefone: (11) 3512 6111​, ramais 236 e 239, respectivamente</p><br />\n" +
     "<ol id=\"passos\" class=\"list-unstyled clearfix ng-scope\">\n" +
     "	<li ng-class=\"{passo_atual: passo==1}\"><span>1&ordm;</span><br />passo</li>\n" +
@@ -986,7 +1055,7 @@ angular.module("questionario/questionario.tpl.html", []).run(["$templateCache", 
     "    <textarea ng-model=\"acervo.informacoes.adicionais\" name=\"informacoes_adicionais\" class=\"form-control\"></textarea>\n" +
     "    <hr class=\"dotted\" />\n" +
     "	<div class=\"col-sm-offset-4 col-sm-6\">\n" +
-    "		 <button ng-click=\"mudapasso(-1)\" class=\"btn btn-warning\">Passo anterior</button> <input ng-click=\"bypass()\" type=\"submit\" class=\"btn btn-success\" value=\"Enviar dados\"/></button>     \n" +
+    "		<a ng-click=\"mudapasso(-1)\" ng-href=\"#3\" class=\"btn btn-warning\">Passo anterior</a> <input ng-click=\"bypass()\" type=\"submit\" class=\"btn btn-success\" value=\"Enviar dados\"/></button>     \n" +
     "	</div>\n" +
     "	</form>\n" +
     "</div>");

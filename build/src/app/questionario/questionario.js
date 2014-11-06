@@ -39,11 +39,6 @@ angular.module('site-cra.questionario', [
     };
     $scope.bypass = function () {
       $scope.go = true;
-      $http.post('enviar.php', dados).success(function (response) {
-        $scope.errorCheckout = false;
-        $scope.codPedido = response.codigo;
-        $scope.pageState = 'success';
-      });
     };
     $scope.formTotal = Object.keys($scope.acervo).length;
     $scope.$watch(function () {

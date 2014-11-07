@@ -108,15 +108,16 @@ angular.module("fichatecnica/fichatecnica.tpl.html", []).run(["$templateCache", 
     "	<li><strong style=\"color:#f00855\">ROBERTO SIMÕES BARBEIRO</strong> | Coordenador de Relacionamento Institucional</li>\n" +
     "	<li><strong style=\"color:#f00855\">LABI MENDONÇA</strong> | Coordenador Executivo</li>\n" +
     "	<li><strong style=\"color:#f00855\">DANIELA BUENO</strong> | Produtora</li>\n" +
+    "	<li><strong style=\"color:#f00855\">DANIEL CAJUEIRO</strong> | Assistente de Produção</li>\n" +
     "	<li><strong style=\"color:#f00855\">GILBERTO FERREIRA e LIDIA GANHITO</strong> | Produtores de campo e pesquisa</li>\n" +
     "</ul>\n" +
     "<hr class=\"dotted\" />\n" +
     "<h3>contatos para dúvidas:</h3>\n" +
+    "<ul class=\"list-unstyled list-inline\">\n" +
+    "	<li class=\"text-center\"><img src=\"assets/img/gilberto.png\" alt=\"\" /><br /><br /><a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a> <li class=\"text-center\"><img src=\"assets/img/lidia.png\" alt=\"\" /><br /><br /><a href=\"mailto:cra.lidiag@gmail.com\">cra.lidiag@gmail.com</a></li>\n" +
+    "​</ul>\n" +
     "<p>\n" +
-    "<a href=\"mailto:cra.giba@gmail.com\">cra.giba@gmail.com</a> | <a href=\"mailto:cra.lidiag@gmail.com\">cra.lidiag@gmail.com</a>\n" +
-    "​</p>\n" +
-    "<p>\n" +
-    "Telefones: (11) 3512 6​111 - ​ramais ​236 e 239\n" +
+    "Telefones: (11) 3512 6​111 - ​ramais ​236 (Gilberto) e 239 (Lidia)\n" +
     "</p>");
 }]);
 

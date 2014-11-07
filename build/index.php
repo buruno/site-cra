@@ -38,7 +38,7 @@
 </head>
 <body id="4">
 <div class="container" id="1" >
-	<div class="col-sm-2" id="2">
+	<div class="col-md-2 col-sm-12" id="2">
 	<div class="navbar main " role="navigation" id="3">
 		<a class="navbar-logo" href="home"><img src="assets/img/logo-cra.png"  style="width: 12em" title="CRA"/></a>
 		<div class="navbar-menu">
@@ -52,7 +52,7 @@
 		<a href="http://cinemateca.org.br" target="_blank"><img src="assets/img/logo_cine.png" class="img-responsive pull-right" style="width: 8em" /></a>
 	</div>
 </div>
-<section ui-view="main" id="main" class="container main col-sm-8 col-sm-offset-4">
+<section ui-view="main" id="main" class="container main col-md-8 col-sm-12 col-md-offset-4">
 </section>
 </body>
 </html>

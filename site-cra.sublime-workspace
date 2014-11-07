@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ut",
+				"utf8_decode"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
 				"get",
 				"getElementById"
 			],
@@ -91,7 +99,7 @@
 			"file": "src/app/questionario/questionario.tpl.html",
 			"settings":
 			{
-				"buffer_size": 57597,
+				"buffer_size": 57669,
 				"line_ending": "Unix"
 			}
 		},
@@ -108,15 +116,7 @@
 			"file": "src/app/questionario/questionario.js",
 			"settings":
 			{
-				"buffer_size": 2219,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/app.js",
-			"settings":
-			{
-				"buffer_size": 728,
+				"buffer_size": 2016,
 				"line_ending": "Unix"
 			}
 		},
@@ -145,34 +145,18 @@
 			}
 		},
 		{
-			"file": "build/index.php",
+			"file": "producao/enviar.php",
 			"settings":
 			{
-				"buffer_size": 2961,
+				"buffer_size": 3454,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/cinemateca/devel/programadorabrasil/build/index.html",
+			"file": "producao/ajax.php",
 			"settings":
 			{
-				"buffer_size": 4312,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "build/src/app/questionario/questionario.js",
-			"settings":
-			{
-				"buffer_size": 2622,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "build/.htaccess",
-			"settings":
-			{
-				"buffer_size": 210,
+				"buffer_size": 2808,
 				"line_ending": "Unix"
 			}
 		}
@@ -217,12 +201,16 @@
 	},
 	"file_history":
 	[
+		"/Users/cinemateca/devel/site-cra/src/app/app.js",
+		"/Users/cinemateca/devel/site-cra/build/.htaccess",
+		"/Users/cinemateca/devel/site-cra/build/src/app/questionario/questionario.js",
+		"/Users/cinemateca/devel/programadorabrasil/build/index.html",
+		"/Users/cinemateca/devel/site-cra/build/index.php",
 		"/Users/cinemateca/devel/programadorabrasil/build/.htaccess",
 		"/Users/cinemateca/devel/temp/assets/site-cra-0.3.2.js",
 		"/Users/cinemateca/devel/site-cra/src/app/home/home.tpl.html",
 		"/Users/cinemateca/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/cinemateca/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/cinemateca/devel/site-cra/build/.htaccess",
 		"/Users/cinemateca/.ssh/id_rsa.pub",
 		"/Users/cinemateca/devel/site-cra/site-cra.sublime-project",
 		"/D/mowes/www/mod-site/source/mod-site.sublime-project",
@@ -492,7 +480,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -555,15 +543,15 @@
 					"file": "src/app/questionario/questionario.tpl.html",
 					"settings":
 					{
-						"buffer_size": 57597,
+						"buffer_size": 57669,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								513,
-								513
+								30349,
+								30349
 							]
 						],
 						"settings":
@@ -573,7 +561,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 14921.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -610,15 +598,15 @@
 					"file": "src/app/questionario/questionario.js",
 					"settings":
 					{
-						"buffer_size": 2219,
+						"buffer_size": 2016,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								850,
+								850
 							]
 						],
 						"settings":
@@ -628,41 +616,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 319.0,
+						"translation.y": 92.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "src/app/app.js",
-					"settings":
-					{
-						"buffer_size": 728,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
 					"file": "src/assets/js/cidades-estados-1.0.js",
 					"settings":
 					{
@@ -690,7 +650,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 6,
 					"file": "src/app/cadastro/cadastro.tpl.html",
 					"settings":
 					{
@@ -718,7 +678,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 7,
 					"file": "src/app/fichatecnica/fichatecnica.tpl.html",
 					"settings":
 					{
@@ -746,113 +706,61 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 9,
-					"file": "build/index.php",
+					"buffer": 8,
+					"file": "producao/enviar.php",
 					"settings":
 					{
-						"buffer_size": 2961,
+						"buffer_size": 3454,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3045,
+								3045
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/Users/cinemateca/devel/programadorabrasil/build/index.html",
-					"settings":
-					{
-						"buffer_size": 4312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "build/src/app/questionario/questionario.js",
-					"settings":
-					{
-						"buffer_size": 2622,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2434,
-								2436
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 42.0,
-						"translation.y": 412.0,
+						"translation.x": 0.0,
+						"translation.y": 839.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "build/.htaccess",
+					"buffer": 9,
+					"file": "producao/ajax.php",
 					"settings":
 					{
-						"buffer_size": 210,
+						"buffer_size": 2808,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2591,
+								2591
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 501.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -888,7 +796,7 @@
 		"cols":
 		[
 			0.0,
-			0.969879518072,
+			0.3,
 			1.0
 		],
 		"rows":

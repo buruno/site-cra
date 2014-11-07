@@ -202,6 +202,39 @@ td.bg-success {
 }
 
 
+@media (max-width: @screen-xs-max) {
+  .navbar.main {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  body { 
+    background: none;
+  }
+}
+@media (min-width: @screen-sm-min) {
+  .navbar.main {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  body { 
+    background: none;
+  }
+}
+@media (min-width: @screen-md-min) {
+  .navbar.main {
+    position: fixed;
+    width: auto;
+    height: 100%;
+  }
+  body {
+    background: url(../assets/img/back.png) center center repeat-y;
+  }
+}
+@media (min-width: @screen-lg-min) {
+
+}
 
 /**
  * Footer

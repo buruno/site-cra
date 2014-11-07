@@ -677,7 +677,7 @@ angular.module("questionario/questionario.tpl.html", []).run(["$templateCache", 
     "	</form>\n" +
     "</div>\n" +
     "<div class=\"ng-scope\" ng-show=\"passo == 4\">\n" +
-    "	<form name=\"formFinal\" action=\"enviar.php\" method=\"POST\">\n" +
+    "	<form name=\"formFinal\" action=\"enviar.php\" method=\"POST\" enctype=\"application/x-www-form-urlencoded\" accept-charset=\"ISO-8859-1\">\n" +
     "	<h2>Resumo do formulário</h2>\n" +
     "	<hr />\n" +
     "	<p>Confira as informações preenchidas e retorne aos passos anteriores para alterá-las</p>\n" +

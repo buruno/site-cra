@@ -6,11 +6,20 @@
     <p>Informações ou dúvidas: Giba (<a href="mailto:cra.giba@gmail.com">cra.giba@gmail.com</a>) ou Lidia (<a href="mailto:cra.lidiag@gmail.com">cra.lidiag@gmail.com</a>)<br />
 ​Telefone: (11) 3512 6111​, ramais 236 e 239, respectivamente</p>
     <hr class="dotted" />
-    <form role="form" ng-submit="cadastrar()" id="form_dados" name="formCadastro" class="form-horizontal" novalidate>
+    <form role="form" ng-submit="cadastrar()" id="form_dados" name="formCadastro" class="form-horizontal"  ng-hide="cadastro.sucesso" novalidate>
       <div class="form-group clearfix">
         <label class="col-sm-2" for="cad_nome">Nome</label>
         <span class="col-sm-6">
           <input type="text" required="true" class="form-control" ng-model="cadastro.nome" name="cra_cadastro_nome"  id="cad_nome" placeholder="" />
+        </span>
+      </div>
+      <div class="form-group clearfix">
+        <label class="col-sm-2" for="cad_email">Telefone</label>
+        <span class="col-sm-2">
+          <input class="form-control" ng-model="cadastro.ddd" name="cra_cadastro_ddd" id="cra_cadastro_ddd" placeholder="DDD" type="text"  required>
+        </span>
+        <span class="col-sm-4">
+          <input class="form-control" ng-model="cadastro.telefone" name="cra_cadastro_tel" id="cra_cadastro_tel" placeholder="Número" type="text" required>
         </span>
       </div>
       <div class="form-group clearfix">
@@ -19,6 +28,7 @@
           <input type="email" required="true" class="form-control" ng-model="cadastro.email" name="cra_cadastro_email" id="cad_email" placeholder="" />
         </span>
       </div>
+
       <div class="col-sm-offset-2 col-sm-3">
         &ensp;<button ng-disabled="formCadastro.$invalid" ng-hide="cadastro.sucesso"  class="btn btn-primary btn-block">Cadastrar</button>
         <a ng-href="questionario" g-disabled="formCadastro.$invalid" ng-if="cadastro.sucesso"  class="btn btn-success btn-block">Ir para o questionário</a>

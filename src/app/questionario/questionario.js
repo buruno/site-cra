@@ -1,6 +1,5 @@
 angular.module( 'site-cra.questionario', [
 	'ui.router',
-	'placeholders',
 	'ui.bootstrap'
 ])
 

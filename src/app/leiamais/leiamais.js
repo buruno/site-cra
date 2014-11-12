@@ -1,6 +1,5 @@
 angular.module( 'site-cra.leiamais', [
   'ui.router',
-  'placeholders',
   'ui.bootstrap'
 ])
 

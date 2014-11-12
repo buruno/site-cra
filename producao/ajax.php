@@ -79,18 +79,32 @@ for($z = 0; $z < $n; $z++) {
 if(sql_insert($datas, $s, "cra_cadastro")) {
     $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
     $subject = "[NOVO CADASTRO] $datas[nome], $datas[email]";
-    $txt = "nome: $datas[nome]\nemail: $datas[email]";
-    $headers = "From: $datas[email]" . "\r\n";
-    if(mail($to,$subject,$txt,$headers)){
+    $txt = "nome: $datas[nome]\nemail: $datas[email]\ntelefone: $datas[telefone]";
+    $header ="From: ".$datas[email]."<>\r\n";
+    $header .="Reply-To:  \n";
+    $header .="MIME-Version: 1.0"."\r\n";
+    $header .="Content-type:text/html;charset=UTF-8"."\r\n";  
+    if(mail($to,$subject,$txt,$header)){
+        $to = $datas[email];
+        $subject = "[CRA - Centro de Referência Audiovisual] Mensagem Automática";
+        $txt = "Caro(a) representante de acervo audiovisual ou colaborador,\n\nMuito obrigado por se cadastrar no site do CRA - Centro de Referência Audiovisual. Sua contribuição será essencial para a formulação do mais completo banco de dados sobre conteúdos audiovisuais do país. \n\nCaso haja qualquer dúvida no preenchimento do questionário, entre em contato conosco.\n Estamos disponíveis por email e telefone:\n\n\tcra.giba@gmail.com\n\tcra.lidiag@gmail.com\n\t(11) 3512 6111\n\tramal 236 ou 239\n\nObrigado e até breve.\nAtt,";
+        $header ="From: cra.giba@gmail.com <Contato - CRA>"."\r\n";
+        $header .="Reply-To: cra.giba@gmail.com , cra.lidiag@gmail.com"."\r\n";
+        $header .="Content-type:text/html;charset=UTF-8"."\r\n";  
+        mail($to,$subject,$txt,$header);
         return true;
     };
 }
 else {
     $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
     $subject = "[ERRO] $datas[nome], $datas[email]";
-    $txt = "nome: $datas[nome]\nemail: $datas[email]";
-    $headers = "From: $datas[email]" . "\r\n";
-    mail($to,$subject,$txt,$headers);
+    $txt = "nome: $datas[nome]\nemail: $datas[email]\ntelefone: $datas[telefone]";
+    $header ="From: ".$datas[email]." <>\n";
+    $header .="Reply-To:  \n";
+    $header .="MIME-Version: 1.0\n";
+    $header .="Content-type:text/html;charset=UTF-8\n";  
+    mail($to,$subject,$txt,$header);
+    echo "erro no banco";
     return false;
 }
 ?>

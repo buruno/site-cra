@@ -78,11 +78,14 @@ for($z = 0; $z < $n; $z++) {
 }
 if(sql_insert($datas, $s, "cra_acervo")) {
     $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
+    $header ="From: ".$_POST[dados_email]." <>\n";
+    $header .="Reply-To:  \n";
+    $header .="MIME-Version: 1.0\n";
+    $header .="Content-Type: text/plain\n";  
     $subject = "[NOVA INSCRIÇÃO] $_POST[dados_id], $_POST[dados_nome]";
     $txt = http_build_query($datas,'',"\n");
     $txt = urldecode($txt);
-    $headers = "From: $_POST[dados_email]";
-    if(mail($to,$subject,$txt,$headers)){
+    if(mail($to,$subject,$txt,$header)){
         ?>
         <script>
         alert("Questionário preenchido com sucesso! Muito obrigado por sua inestimável contribuição.");
@@ -107,8 +110,11 @@ else {
     $to = "webdesigner@cinemateca.org.br, cra.giba@gmail.com, cra.lidiag@gmail.com";
     $subject = "[ERRO]: $_POST[dados_id], $_POST[dados_nome]";
     $txt = "$datas";
-    $headers = "From: $_POST[dados_email]" . "\r\n";
-    mail($to,$subject,$txt,$headers);
+    $header ="From: ".$_POST[dados_email]." <>\n";
+    $header .="Reply-To:  \n";
+    $header .="MIME-Version: 1.0\n";
+    $header .="Content-Type: text/plain\n";  
+    mail($to,$subject,$txt,$header);
     ?>
         <script>
         alert("Houve algum erro no processamento de seus dados, por favor tente mais tarde novamente. ");

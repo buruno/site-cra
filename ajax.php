@@ -1,4 +1,4 @@
-<?
+<? 
 header('Content-Type: text/html; charset=utf-8');
 include('variables.php');
 function bindParameters(&$statement, &$params) {
